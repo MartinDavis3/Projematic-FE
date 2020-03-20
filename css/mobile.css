@@ -1,0 +1,86 @@
+@import "./meyer-reset.css";
+
+
+/* General Setup */
+
+* {  
+    font-family: "Helvetica", "Arial", "sans-serif";
+    font-size: 16px;
+    width: auto;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
+    font-family: "Helvetica", "Arial", "sans-serif";
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 22px;
+    margin: 6px;
+    color: black;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+
+/* The grid: Five equal columns that float next to each other */
+.column {
+    float: left;
+    width: 20vw;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 10px;
+    padding-right: 4px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: blue;
+    border: black;
+    border-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    /* background-color: lightgray; */
+}
+
+.containerTab {
+    font-size: 14px;
+    padding: 10px;
+    color: darkblue;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+
+
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+
+
+
+}
