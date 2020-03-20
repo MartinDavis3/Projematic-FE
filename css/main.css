@@ -21,14 +21,15 @@ header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
 }
 
 h1 {
-    /* text-align: centre; */
+    text-align: center;
     font-size: 22px;
+    margin: 6px;
     color: black;
 }
 
 h2 {
-    text-align: centre;
     font-size: 16px;
+    margin-bottom: 32px;
 }
 
 
@@ -38,7 +39,10 @@ h2 {
     width: 20vw;
     margin-left: 0;
     margin-right: 0;
-    padding: 4px;
+    padding-top: 10px;
+    padding-right: 4px;
+    padding-bottom: 10px;
+    padding-left: 4px;
     text-align: center;
     font-size: 14px;
     cursor: pointer;
