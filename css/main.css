@@ -4,7 +4,7 @@
 /* General Setup */
 
 * {  
-    font-family: "Helvetica", "Arial", "sans-serif";
+    font-family: "Tahoma";
     font-size: 16px;
     /* width: auto; */
     box-sizing: border-box;
@@ -14,7 +14,7 @@
 
 
 header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
-    font-family: "Helvetica", "Arial", "sans-serif";
+    font-family: "Tahoma";
     /* width: auto; */
     margin-right: auto;
     margin-left: auto;
@@ -22,6 +22,10 @@ header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
 
 svg {
     background-color: lightskyblue;
+}
+
+#tg {
+    transform: scale(1);
 }
 
 
