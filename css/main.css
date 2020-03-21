@@ -20,17 +20,14 @@ header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
     margin-left: auto;
 }
 
-svg {
-    background-color: lightskyblue;
+/* For all boxes */
+
+.box {
+    background-color: #fcf7f8;
 }
 
-.planBox {
-    width: 130px;
-    height: 88px;
-}
-
-.box path {
-    /* transform: translate(5px, 5px); */
+.box path,
+.box rect {
     fill:#fcf7f8;
     stroke: #000000;
     stroke-width: 2;
@@ -40,45 +37,40 @@ svg {
     transform: translate(5px, 5px);
 }
 
-.planBox text {
+.box text {
     fill: #17255a;
 }
 
+/* For specific box types */
+
+.planBox {
+    width: 130px;
+    height: 88px;
+}
+
 .doubleBox {
-    width: calc( 1 * 130px );
-    height: calc( 1 * 146px );
-}
-
-.doubleBox path {
-    stroke: #000000;
-    stroke-width: 2;
-}
-
-.doubleBox g {
-    transform: scale(1) translate(5px, 5px);
+    width: 130px;
+    height: 146px;
 }
 
 .doubleBox path:first-child {
     fill: #fcf7f8;
 }
 
-.doubleBox path:nth-child(3) {
-    fill: #00e6e6    
+.doubleBox path:nth-child(3),
+.toolsBox path {
+    fill: #00e6e6;    
 }
 
 .toolsBox {
     width: 130px;
     height: 88px;
 }
-.toolsBox path {
-    stroke: #000000;
-    stroke-width: 2;
-}
 
-#tg {
-    transform: scale(2);
+.activityBox {
+    width: 130px;
+    height: 70px;
 }
-
 
 /* Tablet */
 @media screen and (min-width: 768px) {
