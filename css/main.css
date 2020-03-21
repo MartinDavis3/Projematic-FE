@@ -6,7 +6,7 @@
 * {  
     font-family: "Tahoma";
     font-size: 16px;
-    /* width: auto; */
+    /* width: auto;  NOTE! cannot use width auto here, oterwise SVG rectangles do not work*/
     box-sizing: border-box;
     margin-right: auto;
     margin-left: auto;
@@ -15,7 +15,7 @@
 
 header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
     font-family: "Tahoma";
-    /* width: auto; */
+    /* width: auto;  NOTE! cannot use width auto here, oterwise SVG rectangles do not work */
     margin-right: auto;
     margin-left: auto;
 }
@@ -39,6 +39,7 @@ header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
 
 .box text {
     fill: #17255a;
+    /* fill: magenta;  used to test if targeting is good*/
 }
 
 /* For specific box types */
@@ -64,7 +65,7 @@ header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
 
 .toolsBox {
     width: 130px;
-    height: 88px;
+    height: 90px;
 }
 
 .activityBox {
