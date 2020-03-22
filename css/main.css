@@ -83,14 +83,189 @@ svg tspan {
 }
 
 #planning-outline-graphic {
-    width: 268px;
-    height: 308px;
+    width: 540px;
+    height: 620px;
+}
+#planning-outline-graphic g {
+    transform: scale(2);
+
 }
 
 #execution-outline-graphic {
     width: 216px;
     height: 270px;
 }
+
+/* End of graphic elements */
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+/* Top-level grid */
+
+main {
+    display: grid;
+    grid-template-columns: 10vw 10vw 40vw 30vw 10vw;
+    grid-template-rows: auto;
+}
+
+/* Unusually for CSS, I am going to use indenting here, for elements of grids,
+   as I have several nested gids and this will make thing clearer. */
+
+    /* Elements of the top-level grid (sections) */
+
+    /* for all sections */
+
+    section {
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+    }
+
+    /* for the section headings */
+
+    h2:first-child {
+        width: 100%;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+        border-bottom-width: 1px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    /* for individual elements (each of which has its own grid) */
+
+    section:nth-child(1) {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30px 100px auto;
+    }
+
+    section:nth-child(2) {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30px 100px 100px 300px auto;
+    }
+
+    section:nth-child(3) {
+        display: grid;
+        grid-template-columns: calc( 100% / 3 ) calc( 100% / 3 ) calc( 100% / 3 );
+        grid-template-rows: 30px 100px auto;
+    }
+
+        /* second-level grid (planning section) */
+
+        section:nth-child(3) *:nth-child(1) {
+            grid-column: 1 / span 3;
+        }
+
+        section:nth-child(3) *:nth-child(5) {
+            grid-column: 1 / span 3;
+            grid-row: 3;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+            margin-right: 10px;
+            margin-left: 10px;
+            display: grid;
+            grid-template-columns: calc( 100% / 8 )  calc( 100% / 8 ) calc( 100% / 8 ) calc( 100% / 8 ) calc( 100% / 8 ) calc( 100% / 8 ) calc( 100% / 8 ) calc( 100% / 8 );
+            grid-template-rows: auto auto auto auto auto auto;
+        }
+
+            /* third-level grid (planning box) */
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(1) {
+                grid-row: 1;
+                grid-column: 1 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(2) {
+                grid-row: 1;
+                grid-column: 3 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(3) {
+                grid-row: 1;
+                grid-column: 5 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(4) {
+                grid-row: 1;
+                grid-column: 7 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(5) {
+                grid-row: 2;
+                grid-column: 2 / span 5;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(6) {
+                grid-row: 3;
+                grid-column: 2 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(7) {
+                grid-row: 3;
+                grid-column: 4 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(8) {
+                grid-row: 3;
+                grid-column: 6 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(9) {
+                grid-row: 4;
+                grid-column: 2 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(10) {
+                grid-row: 4;
+                grid-column: 4 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(11) {
+                grid-row: 4;
+                grid-column: 6 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(12) {
+                grid-row: 5;
+                grid-column: 4 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(13) {
+                grid-row: 6;
+                grid-column: 2 / span 2;
+            }
+
+            section:nth-child(3) *:nth-child(5) svg:nth-child(14) {
+                grid-row: 6;
+                grid-column: 6 / span 2;
+            }
+
+
+    section:nth-child(4) {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30px 100px auto;
+    }
+
+    section:nth-child(5) {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30px 100px 100px 100px 100px 100px auto;
+    }
 
 
 /* Tablet */
