@@ -73,6 +73,24 @@ header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
     height: 70px;
 }
 
+/* Extra shapes */
+
+#brace {
+    width: 522px;
+    height: 64px;
+}
+
+#planning-box {
+    width: 264px;
+    height: 296px;
+}
+
+#execution-box {
+    width: 210px;
+    height: 260px;
+}
+
+
 /* Tablet */
 @media screen and (min-width: 768px) {
 
