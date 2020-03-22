@@ -22,72 +22,74 @@ header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
 
 /* For all boxes */
 
-.box {
+svg {
     background-color: #fcf7f8;
+    /* background-color: lightblue; */
 }
 
-.box path,
-.box rect {
+svg path,
+svg rect {
     fill:#fcf7f8;
     stroke: #000000;
     stroke-width: 2;
 }
 
-.box g {
-    transform: translate(5px, 5px);
+svg g {
+    transform: scale(1.0) translate(5px, 5px);
 }
 
-.box text {
+svg text,
+svg tspan {
+    font-size: 16px;
     fill: #17255a;
     /* fill: magenta;  used to test if targeting is good*/
 }
 
 /* For specific box types */
 
-.planBox {
+.plan-graphic {
     width: 130px;
     height: 88px;
 }
 
-.doubleBox {
+.pair-graphic {
     width: 130px;
     height: 146px;
 }
 
-.doubleBox path:first-child {
+.box {
     fill: #fcf7f8;
 }
 
-.doubleBox path:nth-child(3),
-.toolsBox path {
+.tools-box {
     fill: #00e6e6;    
 }
 
-.toolsBox {
+.tools-graphic {
     width: 130px;
     height: 90px;
 }
 
-.activityBox {
+.activity-graphic {
     width: 130px;
     height: 70px;
 }
 
 /* Extra shapes */
 
-#brace {
-    width: 522px;
-    height: 64px;
+#brace-graphic {
+    width: 528px;
+    height: 68px;
 }
 
-#planning-box {
-    width: 264px;
-    height: 296px;
+#planning-outline-graphic {
+    width: 268px;
+    height: 308px;
 }
 
-#execution-box {
-    width: 210px;
-    height: 260px;
+#execution-outline-graphic {
+    width: 216px;
+    height: 270px;
 }
 
 
