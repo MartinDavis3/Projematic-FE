@@ -24,7 +24,7 @@ header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
 
 svg {
     background-color: #fcf7f8;
-    /* background-color: lightblue; */
+    background-color: lightblue;
 }
 
 svg path,
