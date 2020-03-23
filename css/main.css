@@ -105,7 +105,7 @@ h3 {
 
 main {
     display: grid;
-    grid-template-columns: 8vw 8vw 45vw 25vw 8vw;
+    grid-template-columns: 8vw 8vw 40vw 30vw 8vw;
     grid-template-rows: auto;
     /* justify-items: center; */
 }
@@ -121,7 +121,7 @@ main {
         border-style: solid;
         border-color: black;
         border-width: 1px;
-        /* justify-self: stretch; */
+        justify-content: space-around;
     }
 
     /* for the section headings */
@@ -152,7 +152,8 @@ main {
 
     section:nth-child(3) {
         display: grid;
-        grid-template-columns: calc( ( 100% - 8vw ) / 2 ) 8vw  calc( ( 100% - 8vw ) / 2 );
+        /* grid-template-columns: calc( ( 100% - 8vw ) / 2 ) 8vw  calc( ( 100% - 8vw ) / 2 ); */
+        grid-template-columns: 1fr 8vw 1fr;
         grid-template-rows: 30px 100px auto;
         justify-items: center;
     }
@@ -181,18 +182,22 @@ main {
         }
 
         section:nth-child(3) > div:nth-child(5) {
+            /* styling as grid item */
             grid-column: 1 / span 3;
             grid-row: 3;
+            justify-self: stretch;
             border-style: solid;
             border-color: black;
             border-width: 1px;
-            margin-right: 2%;
-            margin-bottom: 2%;
-            margin-left: 10px;
+            margin-right: 1vw;
+            margin-bottom: 10px;
+            margin-left: 1vw;
+            /* styling as container of next level grid */
             display: grid;
-            grid-template-columns: repeat(8, calc( 8vw / 2 ) );
+            grid-template-columns: repeat(8, 4vw );
             grid-template-rows: auto auto auto auto auto auto;
-            justify-items: center;
+            justify-items: stretch;
+            justify-content: space-around;
         }
 
             /* third-level grid (planning box) */
@@ -275,7 +280,8 @@ main {
 
         section:nth-child(4) {
             display: grid;
-            grid-template-columns: calc( ( 100% - 8vw ) / 2 ) 8vw  calc( ( 100% - 8vw ) / 2 );
+            /* grid-template-columns: calc( ( 100% - 8vw ) / 2 ) 8vw  calc( ( 100% - 8vw ) / 2 ); */
+            grid-template-columns: 1fr 8vw 1fr;
             grid-template-rows: 30px 100px 100px auto;
             justify-items: center;
         }
@@ -298,17 +304,20 @@ main {
         section:nth-child(4) > div:nth-child(4) {
             grid-row: 4;
             grid-column: 1 / span 3;
+            justify-self: stretch;
             border-style: solid;
             border-color: black;
             border-width: 1px;
             border-radius: 30px;
-            margin-right: 10px;
+            margin-top: 10px;
+            margin-right: 1vw;
             margin-bottom: 10px;
-            margin-left: 10px;
+            margin-left: 1vw;
             display: grid;
-            grid-template-columns: calc( 100% / 3 )  calc( 100% / 3 ) calc( 100% / 3 );
+            grid-template-columns: repeat(3, 8vw);
             grid-template-rows: auto auto auto auto auto auto auto;
-            justify-items: center;
+            justify-items: stretch;
+            justify-content: space-around;
         }
 
             /* Third-level grid (execution box) */
