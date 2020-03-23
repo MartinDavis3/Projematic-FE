@@ -176,12 +176,6 @@ main {
         }
 
         section:nth-child(3) > div:nth-child(4) {
-            grid-row: 2;
-            grid-column: 3 / span 1;
-            background-color: red;
-        }
-
-        section:nth-child(3) > div:nth-child(5) {
             /* styling as grid item */
             grid-column: 1 / span 3;
             grid-row: 3;
@@ -197,77 +191,77 @@ main {
             grid-template-columns: repeat(8, 4vw );
             grid-template-rows: auto auto auto auto auto auto;
             justify-items: stretch;
-            justify-content: space-around;
+            justify-content: center;
         }
 
             /* third-level grid (planning box) */
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(1) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(1) {
                 grid-row: 1;
                 grid-column: 1 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(2) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(2) {
                 grid-row: 1;
                 grid-column: 3 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(3) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(3) {
                 grid-row: 1;
                 grid-column: 5 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(4) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(4) {
                 grid-row: 1;
                 grid-column: 7 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(5) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(5) {
                 grid-row: 2;
                 grid-column: 2 / span 4;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(6) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(6) {
                 grid-row: 3;
                 grid-column: 2 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(7) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(7) {
                 grid-row: 3;
                 grid-column: 4 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(8) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(8) {
                 grid-row: 3;
                 grid-column: 6 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(9) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(9) {
                 grid-row: 4;
                 grid-column: 2 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(10) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(10) {
                 grid-row: 4;
                 grid-column: 4 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(11) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(11) {
                 grid-row: 4;
                 grid-column: 6 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(12) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(12) {
                 grid-row: 5;
                 grid-column: 4 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(13) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(13) {
                 grid-row: 6;
                 grid-column: 2 / span 2;
             }
 
-            section:nth-child(3) > div:nth-child(5) > svg:nth-child(14) {
+            section:nth-child(3) > div:nth-child(4) > svg:nth-child(14) {
                 grid-row: 6;
                 grid-column: 6 / span 2;
             }
