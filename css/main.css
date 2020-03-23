@@ -8,16 +8,16 @@
     font-size: 16px;
     /* width: auto;  NOTE! cannot use width auto here, oterwise SVG rectangles do not work*/
     box-sizing: border-box;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 
 header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
     font-family: "Tahoma";
     /* width: auto;  NOTE! cannot use width auto here, oterwise SVG rectangles do not work */
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 /* For all boxes */
@@ -53,8 +53,8 @@ svg tspan {
 }
 
 .pair-graphic {
-    width: 130px;
-    height: 146px;
+    /* width: 130px; */
+    /* height: 146px; */
 }
 
 .box {
@@ -94,7 +94,10 @@ h2 {
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
+}
 
+h3 {
+    text-align: center;
 }
 
 /* Top-level grid */
@@ -103,7 +106,7 @@ main {
     display: grid;
     grid-template-columns: 8vw 8vw 45vw 25vw 8vw;
     grid-template-rows: auto;
-    justify-items: stretch;
+    /* justify-items: center; */
 }
 
 /* Unusually for CSS, I am going to use indenting here, for elements of grids,
@@ -117,7 +120,7 @@ main {
         border-style: solid;
         border-color: black;
         border-width: 1px;
-        justify-self: stretch;
+        /* justify-self: stretch; */
     }
 
     /* for the section headings */
@@ -143,12 +146,14 @@ main {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 30px 100px 100px 300px auto;
+        justify-items: center;
     }
 
     section:nth-child(3) {
         display: grid;
-        grid-template-columns: calc( ( 100% / 2 ) - 8vw ) 8vw calc( ( 100% / 2 ) - 8vw );
+        grid-template-columns: calc( ( 100% - 8vw ) / 2 ) 8vw  calc( ( 100% - 8vw ) / 2 );
         grid-template-rows: 30px 100px auto;
+        justify-items: center;
     }
 
         /* second-level grid (planning section) */
@@ -184,8 +189,9 @@ main {
             margin-bottom: 2%;
             margin-left: 10px;
             display: grid;
-            grid-template-columns: calc( 100% / 8 )  calc( 100% / 8 ) calc( 100% / 8 ) calc( 100% / 8 ) calc( 100% / 8 ) calc( 100% / 8 ) calc( 100% / 8 ) calc( 100% / 8 );
+            grid-template-columns: repeat(8, calc( 8vw / 2 ) );
             grid-template-rows: auto auto auto auto auto auto;
+            justify-items: center;
         }
 
             /* third-level grid (planning box) */
@@ -268,11 +274,29 @@ main {
 
         section:nth-child(4) {
             display: grid;
-            grid-template-columns: 100%;
-            grid-template-rows: 30px 100px auto;
+            grid-template-columns: calc( ( 100% - 8vw ) / 2 ) 8vw  calc( ( 100% - 8vw ) / 2 );
+            grid-template-rows: 30px 100px 100px auto;
+            justify-items: center;
+        }
+
+        section:nth-child(4) > h2:nth-child(1) {
+            grid-row: 1;
+            grid-column: 1 / span 3;
+        }
+
+        section:nth-child(4) > p:nth-child(2) {
+            grid-row: 2;
+            grid-column: 1 / span 3;
+        }
+
+        section:nth-child(4) > svg:nth-child(3) {
+            grid-row: 3;
+            grid-column: 2;
         }
 
         section:nth-child(4) > div:nth-child(4) {
+            grid-row: 4;
+            grid-column: 1 / span 3;
             border-style: solid;
             border-color: black;
             border-width: 1px;
@@ -283,6 +307,7 @@ main {
             display: grid;
             grid-template-columns: calc( 100% / 3 )  calc( 100% / 3 ) calc( 100% / 3 );
             grid-template-rows: auto auto auto auto auto auto auto;
+            justify-items: center;
         }
 
             /* Third-level grid (execution box) */
@@ -350,6 +375,7 @@ main {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 30px 100px 100px 100px 100px 100px auto;
+        justify-items: center;
     }
 
 
