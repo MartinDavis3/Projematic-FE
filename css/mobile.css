@@ -62,7 +62,7 @@ h2 {
     color: darkblue;
 }
 
-/* Clear floats after the columns */
+Clear floats after the columns
 .row:after {
     content: "";
     display: table;
