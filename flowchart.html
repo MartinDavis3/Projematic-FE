@@ -10,18 +10,18 @@
         <script src="./js/scripts.js"></script>
         <script src="./js/mobile.js"></script>
     </head>
-    <body>
+    <body onresize="handleResize()">
         <header>
             <h1>Projematic</h1>
         </header>
         <main>
             <!-- The grid: five columns -->
             <div class="row">
-                <div id='t1' class="column" style="border-bottom-style: none;"   onclick="openTab('b1', 't1');">Pre-Project</div>
-                <div id='t2' class="column" style="background-color: lightgray" onclick="openTab('b2', 't2');">Initiation</div>
-                <div id='t3' class="column" style="background-color: lightgray" onclick="openTab('b3', 't3');">Planning</div>
-                <div id='t4' class="column" style="background-color: lightgray" onclick="openTab('b4', 't4');">Execution</div>
-                <div id='t5' class="column" style="background-color: lightgray" onclick="openTab('b5', 't5');">Closing</div>
+                <div id='t1' class="column" onclick="openTab('b1', 't1');">Pre-Project</div>
+                <div id='t2' class="column" onclick="openTab('b2', 't2');">Initiation</div>
+                <div id='t3' class="column" onclick="openTab('b3', 't3');">Planning</div>
+                <div id='t4' class="column" onclick="openTab('b4', 't4');">Execution</div>
+                <div id='t5' class="column" onclick="openTab('b5', 't5');">Closing</div>
             </div>
             <article>
             <section id="b1" class="containerTab">

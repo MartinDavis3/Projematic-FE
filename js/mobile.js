@@ -13,11 +13,26 @@ function openTab(tabName, tabId) {
     document.getElementById(tabName).style.display = "grid";
     document.getElementById(tabId).style.borderBottomStyle = "none";
     document.getElementById(tabId).style.backgroundColor = "white";
-  } else {
+  }
+}
+
+var lastWinWidth
+
+function handleResize() {
+  var winWidth = window.innerWidth;
+  var i, x, y;
+  x = document.getElementsByClassName("containerTab");
+  y = document.getElementsByClassName("column");
+  // console.log("lastWinWidth: " + lastWinWidth)
+  // console.log("currWinWidth: " + winWidth)
+  if ( lastWinWidth < 768 && winWidth >= 768) {
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "grid";
       y[i].style.borderBottomStyle = "solid";
-      y[i].style.backgroundColor = "lightgraywhite";
-    }
+      y[i].style.backgroundColor = "white";
+    }  
+  } else if ( lastWinWidth >= 768 && winWidth < 768 ) {
+    openTab("b1", "t1")
   }
-} 
+  lastWinWidth=winWidth
+}

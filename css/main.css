@@ -81,6 +81,12 @@ h2 {
     text-align: center;
 }
 
+.column {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 h3 {
     text-align: center;
 }
@@ -372,8 +378,6 @@ article {
 
             /* End third-level grid (execution box) */
 
-
-
     section:nth-child(5) {
         display: grid;
         grid-template-columns: 100%;
@@ -381,7 +385,9 @@ article {
         justify-items: center;
         justify-content: center;
     }
-@media screen and (max-width: 768px) {
+
+
+    @media screen and (max-width: 768px) {
 
     /* Add styling for clickable boxes along top for mobile */
 
@@ -390,17 +396,14 @@ article {
     .row {
         display: grid;
         grid-template-columns: repeat(5, 20vw);
-        grid-template-columns: 50px;
+        grid-template-rows: 40px;
         justify-items: stretch;
         justify-content: stretch;
-        align-content: stretch;
-        align-items: stretch;
+        align-content: center;
+        align-items: center;
     }
 
     .column {
-        /* float: left; */
-        /* width: 20vw; */
-        display: inline;
         margin-left: 0;
         margin-right: 0;
         padding-top: 10px;
@@ -417,7 +420,12 @@ article {
         border-right-style: solid;
         border-bottom-style: solid;
         border-left-style: solid;
-        /* background-color: lightgray; */
+        background-color: lightgray;
+    }
+
+    #t1 {
+        background-color: white;
+        border-bottom: none;
     }
 
 
@@ -434,9 +442,9 @@ article {
     }
 
 
-    .row {
-        display: inline;
-    }
+    /* .row { */
+        /* display: inline; */
+    /* } */
 
     .containerTab {
         display: none;
@@ -449,6 +457,7 @@ article {
 
     }
 
+
 /* Tablet */
 @media screen and (min-width: 768px) {
 
@@ -460,11 +469,27 @@ article {
 @media screen and (min-width: 768px) {
 
     .row {
-        display: none;
+        display: grid;
+        grid-template-columns: 8vw 8vw 40vw 30vw 8vw;
+
+        /* display: none; */
     }
 
     .containerTab {
         display: grid;
     }
+
+    .column {
+        background-color: white;
+        border-bottom-style: solid;
+        color: blue;
+        border: black;
+        border-width: 1px;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-left-style: solid;        
+    }
+
 
 }
