@@ -66,20 +66,21 @@ svg tspan {
 }
 
 .tools-graphic {
-    width: 130px;
-    height: 90px;
+    /* width: 130px; */
+    /* height: 90px; */
 }
 
 .activity-graphic {
-    width: 130px;
-    height: 70px;
+    /* width: 130px; */
+    /* height: 70px; */
 }
 
 /* Extra shapes */
 
-#brace-graphic {
-    width: 528px;
-    height: 68px;
+#brace-graphic path {
+    /* width: 528px; */
+    /* height: 68px; */
+    fill: none;
 }
 
 /* End of graphic elements */
@@ -218,7 +219,7 @@ main {
 
             section:nth-child(3) > div:nth-child(5) > svg:nth-child(5) {
                 grid-row: 2;
-                grid-column: 2 / span 5;
+                grid-column: 2 / span 4;
             }
 
             section:nth-child(3) > div:nth-child(5) > svg:nth-child(6) {
