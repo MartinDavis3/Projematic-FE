@@ -81,7 +81,7 @@ h2 {
     text-align: center;
 }
 
-.column {
+.flowchart-tab {
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
@@ -391,9 +391,10 @@ article {
 
     /* Add styling for clickable boxes along top for mobile */
 
-    /* The grid: Five equal columns that float next to each other */
+    /* Styling for expanding grid adapted from: w3schools How TO - Expanding Grid
+       https://www.w3schools.com/howto/howto_js_expanding_grid.asp */
 
-    .row {
+    .tab-div {
         display: grid;
         grid-template-columns: repeat(5, 20vw);
         grid-template-rows: 40px;
@@ -403,7 +404,7 @@ article {
         align-items: center;
     }
 
-    .column {
+    .flowchart-tab {
         margin-left: 0;
         margin-right: 0;
         padding-top: 10px;
@@ -423,7 +424,7 @@ article {
         background-color: lightgray;
     }
 
-    #t1 {
+    #preproject-tab {
         background-color: white;
         border-bottom: none;
     }
@@ -446,11 +447,11 @@ article {
         /* display: inline; */
     /* } */
 
-    .containerTab {
+    .flowchart-section {
         display: none;
     }
 
-    #b1 {
+    #preproject-section {
         display: grid;
     }
 
@@ -468,18 +469,18 @@ article {
 /* Desktop */
 @media screen and (min-width: 768px) {
 
-    .row {
+    .tab-div {
         display: grid;
         grid-template-columns: 8vw 8vw 40vw 30vw 8vw;
 
         /* display: none; */
     }
 
-    .containerTab {
+    .flowchart-section {
         display: grid;
     }
 
-    .column {
+    .flowchart-tab {
         background-color: white;
         border-bottom-style: solid;
         color: blue;

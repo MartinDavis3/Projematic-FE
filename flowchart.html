@@ -15,16 +15,17 @@
             <h1>Projematic</h1>
         </header>
         <main>
-            <!-- The grid: five columns -->
-            <div class="row">
-                <div id='t1' class="column" onclick="openTab('b1', 't1');">Pre-Project</div>
-                <div id='t2' class="column" onclick="openTab('b2', 't2');">Initiation</div>
-                <div id='t3' class="column" onclick="openTab('b3', 't3');">Planning</div>
-                <div id='t4' class="column" onclick="openTab('b4', 't4');">Execution</div>
-                <div id='t5' class="column" onclick="openTab('b5', 't5');">Closing</div>
+            <!-- Structure for expanding grid adapted from w3schools How TO - Expanding Grid -->
+            <!-- https://www.w3schools.com/howto/howto_js_expanding_grid.asp -->
+            <div class="tab-div">
+                <div id='preproject-tab' class="flowchart-tab" onclick="openTab('preproject-section', 'preproject-tab');">Pre-Project</div>
+                <div id='initiation-tab' class="flowchart-tab" onclick="openTab('initiation-section', 'initiation-tab');">Initiation</div>
+                <div id='planning-tab' class="flowchart-tab" onclick="openTab('planning-section', 'planning-tab');">Planning</div>
+                <div id='execution-tab' class="flowchart-tab" onclick="openTab('execution-section', 'execution-tab');">Execution</div>
+                <div id='closing-tab' class="flowchart-tab" onclick="openTab('closing-section', 'closing-tab');">Closing</div>
             </div>
             <article>
-            <section id="b1" class="containerTab">
+            <section id="preproject-section" class="flowchart-section">
                 <h2>Pre-Project</h2>
                 <p>Organisation validates the need</p>
                 <svg class="plan-graphic" viewBox="0 0 140 98">
@@ -36,7 +37,7 @@
                     </g>
                 </svg> 
             </section>
-            <section id="b2" class="containerTab">
+            <section id="initiation-section" class="flowchart-section">
                 <h2>Initiation</h2>
                 <p>Project Sponsor and Project Manager define the project</p>
                 <svg class="plan-graphic" viewBox="0 0 140 98">
@@ -68,7 +69,7 @@
                     </g>
                 </svg>
             </section>
-            <section id="b3" class="containerTab">
+            <section id="planning-section" class="flowchart-section">
                 <h2>Planning</h2>
                 <p>Plan the project</p>
                 <svg class="plan-graphic" viewBox="0 0 140 98">
@@ -232,7 +233,7 @@
                     </svg> 
                 </div>
             </section>
-            <section id="b4" class="containerTab">
+            <section id="execution-section" class="flowchart-section">
                 <h2>Execution</h2>
                 <p>Monitor work to ensure it is being performed as planned</p>
                 <svg class="plan-graphic" viewBox="0 0 140 98">
@@ -328,7 +329,7 @@
                     </svg>
                 </div>
             </section>
-            <section id="b5" class="containerTab">
+            <section id="closing-section" class="flowchart-section">
                 <h2>Closing</h2>
                 <p>Finish and close the project</p>
                 <svg class="plan-graphic" viewBox="0 0 140 98">

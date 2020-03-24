@@ -1,10 +1,14 @@
+const screenWidthBreakpoint = 768
+
+// This function for expanding grid adapted from: w3schools How TO - Expanding Grid
+// https://www.w3schools.com/howto/howto_js_expanding_grid.asp
 // Hide all elements with class="containerTab", except for the one that matches the clickable grid column
 function openTab(tabName, tabId) {
   var winWidth = window.innerWidth;
   var i, x, y;
-  x = document.getElementsByClassName("containerTab");
-  y = document.getElementsByClassName("column");
-  if ( winWidth < 768 ) {
+  x = document.getElementsByClassName("flowchart-section");
+  y = document.getElementsByClassName("flowchart-tab");
+  if ( winWidth < screenWidthBreakpoint ) {
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
       y[i].style.borderBottomStyle = "solid";
@@ -16,23 +20,22 @@ function openTab(tabName, tabId) {
   }
 }
 
+// Change button appearance at screen width breakpoint
 var lastWinWidth
 
 function handleResize() {
   var winWidth = window.innerWidth;
   var i, x, y;
-  x = document.getElementsByClassName("containerTab");
-  y = document.getElementsByClassName("column");
-  // console.log("lastWinWidth: " + lastWinWidth)
-  // console.log("currWinWidth: " + winWidth)
-  if ( lastWinWidth < 768 && winWidth >= 768) {
+  x = document.getElementsByClassName("flowchart-section");
+  y = document.getElementsByClassName("flowchart-tab");
+  if ( lastWinWidth < screenWidthBreakpoint && winWidth >= screenWidthBreakpoint ) {
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "grid";
       y[i].style.borderBottomStyle = "solid";
       y[i].style.backgroundColor = "white";
     }  
-  } else if ( lastWinWidth >= 768 && winWidth < 768 ) {
-    openTab("b1", "t1")
+  } else if ( lastWinWidth >= screenWidthBreakpoint && winWidth < screenWidthBreakpoint ) {
+    openTab("preproject-section", "preproject-tab")
   }
   lastWinWidth=winWidth
 }
