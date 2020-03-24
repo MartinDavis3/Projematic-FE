@@ -25,13 +25,19 @@ header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
 body {
     background-color: #fcf7f8;
 }
+header {
+    text-align: center;    
+}
 
-p {
-    padding-top: 4px;
+.flowchart-section p {
+    font-size: 1vw;
+    line-height: 1.1vw;
+    padding-top: 0.2vw;
     color: #17255a;
 }
 
 .tab-div div {
+    font-size: 1.3vw;
     height: 35px;
     line-height: 35px;
 }
@@ -118,6 +124,14 @@ article {
     /* justify-items: center; */
 }
 
+
+.plan-graphic,
+.pair-graphic,
+.tools-graphic,
+.activity-graphic {
+    width: 8vw;
+}
+
 /* Unusually for CSS, I am going to use indenting here, for elements of grids,
    as I have several nested gids and this will make thing clearer. */
 
@@ -147,24 +161,25 @@ article {
 
     section:nth-child(1) {
         display: grid;
-        grid-template-columns: 8vw;
-        grid-template-rows: 100px auto;
+        grid-template-columns: 90%;
+        grid-template-rows: 6vw auto;
         justify-items: center;
         align-items: start;
     }
 
     section:nth-child(2) {
         display: grid;
-        grid-template-columns: 8vw;
-        grid-template-rows: 100px 180px 300px;
+        grid-template-columns: 90%;
+        grid-template-rows: 6vw 7vw 15vw auto;
         justify-items: center;
         align-items: start;
     }
 
     section:nth-child(3) {
         display: grid;
-        grid-template-columns: 1fr 8vw 1fr;
-        grid-template-rows: 1px 110px 16px auto;
+        grid-template-columns: 1fr 20% 1fr;
+        /* first row is collapsed, third is arrow so needs fixed height */
+        grid-template-rows: 0vw 5.5vw 8px auto;
         justify-items: center;
         justify-content: center;
         align-items: start;
@@ -208,11 +223,12 @@ article {
             margin-left: 1vw;
             /* styling as container of next level grid */
             display: grid;
-            grid-template-columns: repeat(8, 4vw );
+            grid-template-columns: repeat(8, calc( 100% / 8 ) );
             grid-template-rows: auto 45px auto auto auto auto;
             justify-items: center;
-            justify-content: center;
+            justify-content: space-around;
             align-items: start;
+            align-content: start;
         }
 
             /* third-level grid (planning box) */
@@ -241,6 +257,7 @@ article {
                 /* Brace graphic */
                 grid-row: 2;
                 grid-column: 2 / span 4;
+                justify-self: stretch;
                 align-self: end;
             }
 
@@ -297,8 +314,8 @@ article {
 
         section:nth-child(4) {
             display: grid;
-            grid-template-columns: 1fr 8vw 1fr;
-            grid-template-rows: 1px 40px 110px auto;
+            grid-template-columns: 1fr 33% 1fr;
+            grid-template-rows: 0 2vw 5.5vw auto;
             justify-items: center;
         }
 
@@ -318,6 +335,7 @@ article {
         }
 
         section:nth-child(4) > div:nth-child(4) {
+            /* styling as grid item */
             grid-row: 4;
             grid-column: 1 / span 3;
             justify-self: stretch;
@@ -329,12 +347,14 @@ article {
             margin-right: 1vw;
             margin-bottom: 10px;
             margin-left: 1vw;
+            /* styling as container of next level grid */
             display: grid;
-            grid-template-columns: repeat(3, 8vw);
+            grid-template-columns: repeat(3, calc( 100% / 3 ) );
             grid-template-rows: auto auto auto auto auto auto auto;
-            justify-items: stretch;
+            justify-items: center;
             justify-content: space-around;
             align-items: start;
+            align-content: space-around;
         }
 
             /* Third-level grid (execution box) */
@@ -398,8 +418,8 @@ article {
 
     section:nth-child(5) {
         display: grid;
-        grid-template-columns: 8vw;
-        grid-template-rows: 80px 130px 130px 170px 120px 120px 120px;
+        grid-template-columns: 90%;
+        grid-template-rows: 4vw 6.5vw 6.5vw 8.5vw 6vw 6vw 6vw;
         justify-items: center;
         justify-content: center;
         align-items: start;
@@ -410,6 +430,10 @@ article {
 /* End top-level grid */
 
 
+
+/* Because this application is principally targeted as a desktop product,
+   strict "mobile first" approach was not taken here.
+   However mobile support is included and set up in this section */
 @media screen and (max-width: 768px) {
 
     /* Add styling for clickable boxes along top for mobile */
@@ -453,7 +477,7 @@ article {
     }
 
     /* Top-level grid */
-
+    /*
     article {
         display: grid;
         grid-template-columns: 80vw;
@@ -461,6 +485,10 @@ article {
         justify-items: center;
         justify-content: center;
         align-items: top;
+    } */
+
+    article {
+        grid-template-columns: 23.5vw 23.5vw 99vw 75.5vw 23.5vw;
     }
 
     .flowchart-section {
