@@ -12,11 +12,11 @@ function openTab(tabName, tabId) {
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
       y[i].style.borderBottomStyle = "solid";
-      y[i].style.backgroundColor = "lightgray";
+      y[i].style.backgroundColor = "#c0c6d0";
     }
     document.getElementById(tabName).style.display = "grid";
     document.getElementById(tabId).style.borderBottomStyle = "none";
-    document.getElementById(tabId).style.backgroundColor = "white";
+    document.getElementById(tabId).style.backgroundColor = "#fcf7f8";
   }
 }
 
@@ -32,7 +32,7 @@ function handleResize() {
     for (i = 0; i < x.length; i++) {
       x[i].style.display = "grid";
       y[i].style.borderBottomStyle = "solid";
-      y[i].style.backgroundColor = "white";
+      y[i].style.backgroundColor = "#fcf7f8";
     }  
   } else if ( lastWinWidth >= screenWidthBreakpoint && winWidth < screenWidthBreakpoint ) {
     openTab("preproject-section", "preproject-tab")
