@@ -1,4 +1,5 @@
 @import "./meyer-reset.css";
+@import "./aria.css";
 
 
 /* General Setup */
@@ -458,6 +459,7 @@ article {
 
     }
 
+/* @import "./aria.css"; */
 
 /* Tablet */
 @media screen and (min-width: 768px) {
