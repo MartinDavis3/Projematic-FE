@@ -25,28 +25,32 @@ header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
 body {
     background-color: #fcf7f8;
 }
+
 header {
     text-align: center;    
 }
 
-.flowchart-section p {
-    font-size: 1vw;
-    line-height: 1.1vw;
-    padding-top: 0.2vw;
-    color: #17255a;
-}
-
+/* !!! Need to check here - two blocks seem to target the same elements */
 .tab-div div {
     font-size: 1.3vw;
     height: 35px;
     line-height: 35px;
 }
 
-/* For all boxes */
+.flowchart-tab {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Graphics elements */
+
+/* For all graphics elements */
 
 svg {
     background-color: #fcf7f8;
-    /* background-color: lightblue; */
+    /* used if need to visualise full extent of svg */
+     /* background-color: lightblue; */
 }
 
 svg path,
@@ -60,35 +64,46 @@ svg g {
     transform: scale(1.0) translate(10px, 10px);
 }
 
-#arrow-graphic g {
-    transform: translate(0,0);
-}
 
 svg text,
 svg tspan {
     font-size: 14px;
     fill: #17255a;
-    /* fill: magenta;  used to test if targeting is good */
+    /* used to test if targeting is good */
+    /* fill: magenta; */
 }
 
-/* For specific box types */
+/* For all boxes */
 
 .box {
     fill: #fcf7f8;
 }
 
+.plan-graphic,
+.pair-graphic,
+.tools-graphic,
+.activity-graphic {
+    width: 8vw;
+    background: transparent;
+}
+
+/* For specific tools-box only */
+
 .tools-box {
     fill: #00e6e6;    
 }
 
+/* For extra shapes */
 
-/* Extra shapes */
+#arrow-graphic g {
+    transform: translate(0,0);
+}
 
 #brace-graphic path {
     fill: none;
 }
 
-/* End of graphic elements */
+/* End of graphics elements */
 
 h1 {
     font-size: 24px;
@@ -104,36 +119,30 @@ h2 {
     text-align: center;
 }
 
-.flowchart-tab {
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
+/* !!! Not sure if there is an h3 - check */
 h3 {
     text-align: center;
 }
 
+.flowchart-section p {
+    font-size: 1vw;
+    line-height: 1.1vw;
+    padding-top: 0.2vw;
+    color: #17255a;
+}
+
+/* The flowchart section with grids */
+
+/* Unusually for CSS, I am going to use indenting here, for elements of grids,
+   as I have several nested gids and this will make thing clearer. */
 
 article {
     display: grid;
     grid-template-columns: 9.5vw 9.5vw 40vw 30.5vw 9.5vw;
-    grid-template-rows: auto;
+    grid-template-rows: 48vw;
     justify-items: space-around;
     align-items: top;
-    /* justify-items: center; */
 }
-
-
-.plan-graphic,
-.pair-graphic,
-.tools-graphic,
-.activity-graphic {
-    width: 8vw;
-}
-
-/* Unusually for CSS, I am going to use indenting here, for elements of grids,
-   as I have several nested gids and this will make thing clearer. */
 
     /* Elements of the top-level grid (sections) */
 
@@ -167,19 +176,23 @@ article {
         align-items: start;
     }
 
+        /* Only one column so individual elements line up without being directed */
+
     section:nth-child(2) {
         display: grid;
         grid-template-columns: 90%;
-        grid-template-rows: 6vw 7vw 15vw auto;
+        grid-template-rows: 12.766% 14.894% 31.915% auto;
         justify-items: center;
         align-items: start;
     }
 
+        /* Only one column so individual elements line up without being directed */
+
     section:nth-child(3) {
         display: grid;
         grid-template-columns: 1fr 20% 1fr;
-        /* first row is collapsed, third is arrow so needs fixed height */
-        grid-template-rows: 0vw 5.5vw 8px auto;
+        /* first row is collapsed */
+        grid-template-rows: 0vw 11.702% 0.887% auto;
         justify-items: center;
         justify-content: center;
         align-items: start;
@@ -218,13 +231,13 @@ article {
             border-style: solid;
             border-color: black;
             border-width: 1px;
-            margin-right: 1vw;
-            margin-bottom: 1vw;
-            margin-left: 1vw;
+            margin-right: 2.128%;
+            margin-bottom: 2.128%;
+            margin-left: 2.128%;
             /* styling as container of next level grid */
             display: grid;
             grid-template-columns: repeat(8, calc( 100% / 8 ) );
-            grid-template-rows: auto 45px auto auto auto auto;
+            grid-template-rows: auto 4.979% auto auto auto auto;
             justify-items: center;
             justify-content: space-around;
             align-items: start;
@@ -315,7 +328,7 @@ article {
         section:nth-child(4) {
             display: grid;
             grid-template-columns: 1fr 33% 1fr;
-            grid-template-rows: 0 2vw 5.5vw auto;
+            grid-template-rows: 0 4.255% 11.702% auto;
             justify-items: center;
         }
 
@@ -343,10 +356,10 @@ article {
             border-color: black;
             border-width: 1px;
             border-radius: 30px;
-            margin-top: 10px;
-            margin-right: 1vw;
-            margin-bottom: 10px;
-            margin-left: 1vw;
+            margin-top: 2.128%;
+            margin-right: 2.128%;
+            margin-bottom: 2.128%;
+            margin-left: 2.128%;
             /* styling as container of next level grid */
             display: grid;
             grid-template-columns: repeat(3, calc( 100% / 3 ) );
@@ -419,16 +432,17 @@ article {
     section:nth-child(5) {
         display: grid;
         grid-template-columns: 90%;
-        grid-template-rows: 4vw 6.5vw 6.5vw 8.5vw 6vw 6vw 6vw;
+        grid-template-rows: 8.51% 13.83% 13.83% 18.09% 12.766% 12.766% 12.766%;
         justify-items: center;
         justify-content: center;
         align-items: start;
     }
 
+        /* Only one column so individual elements line up without being directed */
+
     /* End second-level grid
 
 /* End top-level grid */
-
 
 
 /* Because this application is principally targeted as a desktop product,
@@ -443,25 +457,15 @@ article {
 
     .tab-div {
         display: grid;
-        grid-template-columns: repeat(5, 20vw);
-        grid-template-rows: 50px;
+        grid-template-columns: repeat(5, 19.5vw);
+        grid-template-rows: 35px 5px;
         justify-items: stretch;
         justify-content: stretch;
-        align-content: center;
-        align-items: center;
+        align-content: stretch;
+        align-items: stretch;
     }
 
     .flowchart-tab {
-        margin-left: 0;
-        margin-right: 0;
-        padding-top: 10px;
-        padding-right: 4px;
-        padding-bottom: 10px;
-        padding-left: 4px;
-        text-align: center;
-        font-size: 14px;
-        cursor: pointer;
-        color: #003399;
         border: black;
         border-width: 1px;
         border-top-style: solid;
@@ -469,6 +473,22 @@ article {
         border-bottom-style: solid;
         border-left-style: solid;
         background-color: #c0c6d0;
+        /* background-color: magenta; */
+        cursor: pointer;
+    }
+
+    .flowchart-tab p {
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 7.5px;
+        padding-right: 4px;
+        padding-bottom: 7.5px;
+        padding-left: 4px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 20px;        
+        color: #003399;
+        /* color: magenta; */
     }
 
     #preproject-tab {
@@ -476,21 +496,17 @@ article {
         border-bottom: none;
     }
 
-    /* Top-level grid */
-    /*
-    article {
-        display: grid;
-        grid-template-columns: 80vw;
-        grid-template-rows: auto;
-        justify-items: center;
-        justify-content: center;
-        align-items: top;
-    } */
-
-    article {
-        grid-template-columns: 23.5vw 23.5vw 99vw 75.5vw 23.5vw;
+    .plan-graphic,
+    .pair-graphic,
+    .tools-graphic,
+    .activity-graphic {
+        width: 19.8vw;
     }
 
+    article {
+        grid-template-rows: 118.5vw;
+    }
+    
     .flowchart-section {
         display: none;
     }
@@ -499,11 +515,11 @@ article {
         display: grid;
     }
 
-}
-
-
-/* Tablet */
-@media screen and (min-width: 768px) {
+    .flowchart-section p {
+        font-size: 2.475vw;
+        line-height: 2.723vw;
+        padding-top: 0.495vw;
+    }
 
 }
 
@@ -531,6 +547,5 @@ article {
         border-bottom-style: solid;
         border-left-style: solid;        
     }
-
 
 }
