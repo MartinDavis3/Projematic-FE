@@ -12,30 +12,32 @@ function openTab(sectionName, tabName) {
   fcTab = document.getElementsByClassName("flowchart-tab");
   if ( winWidth < screenWidthBreakpoint ) {
     for ( let i = 0; i < fcTab.length; i++) {
-      // NOTE: Normally would not use inline styles
+      // NOTE: Normally would not use inline styles.
       // However, using classes like:
       // oldClass = fcSection[i].className
       // newClass = oldClass.replace('visible-section', 'hidden-section')
       // fcSection[i].className = newClass
       // does not work because section:nth-child(n) in CSS,
-      // used to set grid, beats class selector
-      fcSection[i].style.display = "none"
-      oldClass = fcTab[i].className
-      newClass = oldClass.replace('fc-tab-on', 'fc-tab-off')
-      fcTab[i].className = newClass
+      // used to set grid, appears to beat class selector (specificity).
+      // Could probably add a div below each section to hold grid, but this is a major change to
+      // the grid structure and is not the current priority (25-Mar-2020).
+      fcSection[i].style.display = "none";
+      oldClass = fcTab[i].className;
+      newClass = oldClass.replace('fc-tab-on', 'fc-tab-off');
+      fcTab[i].className = newClass;
     }
     for ( let i = 0; i < 5; i++) {
       if ( sectionName === secNames[i] ) {
         // Comment as above about inline styles
         document.getElementById(sectionName).style.display = "grid";
-        fcArticle = document.getElementById("full-flowchart")
-        fcArticle.className = secWidths[i]
+        fcArticle = document.getElementById("full-flowchart");
+        fcArticle.className = secWidths[i];
       }
     }
     clickTab = document.getElementById(tabName);
-    oldClass=clickTab.className
-    newClass = oldClass.replace('fc-tab-off', 'fc-tab-on')
-    clickTab.className = newClass
+    oldClass=clickTab.className;
+    newClass = oldClass.replace('fc-tab-off', 'fc-tab-on');
+    clickTab.className = newClass;
     // document.getElementById(sectionName).className = 'flowchart-section visible-section'
   }
 }
@@ -51,14 +53,37 @@ function handleResize() {
   // If changing to larger screen
   if ( lastWinWidth < screenWidthBreakpoint && winWidth >= screenWidthBreakpoint ) {
     for ( let i = 0; i < fcSection.length; i++) {
+      oldClass = fcTab[i].className;
+      newClass = oldClass.replace('fc-tab-on', 'fc-tab-off');
+      fcTab[i].className = newClass;
       fcSection[i].style.display = "grid";
-      fcTab[i].style.borderBottomStyle = "solid";
-      fcTab[i].style.backgroundColor = "#fcf7f8";
     }  
-    document.getElementById("full-flowchart").style.gridTemplateColumns = "9.5vw 9.5vw 40vw 30.5vw 9.5vw"
+    document.getElementById("full-flowchart").className = "show-all";
   // If changing to a smaller screen
   } else if ( lastWinWidth >= screenWidthBreakpoint && winWidth < screenWidthBreakpoint ) {
-    openTab("preproject-section", "preproject-tab")
+    openTab("preproject-section", "preproject-tab");
   }
-  lastWinWidth=winWidth
+  lastWinWidth=winWidth;
+}
+
+function setForScreenSize() {
+  var winWidth = window.innerWidth;
+  var fcSection, fcTab;
+  console.log("in routine setForScreenSize");
+  fcSection = document.getElementsByClassName("flowchart-section");
+  fcTab = document.getElementsByClassName("flowchart-tab");
+  // If large screen
+  if ( winWidth >= screenWidthBreakpoint ) {
+    for ( let i = 0; i < fcSection.length; i++) {
+      oldClass = fcTab[i].className;
+      newClass = oldClass.replace('fc-tab-on', 'fc-tab-off');
+      fcTab[i].className = newClass;
+      fcSection[i].style.display = "grid";
+    }  
+    document.getElementById("full-flowchart").className = "show-all";
+  // If small screen
+  } else if ( winWidth < screenWidthBreakpoint ) {
+    openTab("preproject-section", "preproject-tab");
+  }
+  lastWinWidth=winWidth;
 }
