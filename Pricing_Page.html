@@ -6,14 +6,93 @@
         <meta charset="UTF-8">
         <meta name="description" content="html boilerplate">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/main.css">
-        <script src="./js/scripts.js"></script>
-        <script src="./js/mobile.js"></script>
+        <!-- Style(s)-->
+        <link rel="stylesheet" href="./Bootstrap/CSS/maing.css"> 
+
+        <!-- Script(s)-->
+        <script type= "text/javascript" src="./Bootstrap/JS/scriptsg.js" defer></script>
+
+        <!-- Bootstrap Style(s)-->
+        <link rel="stylesheet" href="./Bootstrap/CSS/bootstrap.min.css"> 
+
+        <!-- Bootstrap Script(s)-->
+        <script type= "text/javascript" src="./Bootstrap/jQuery/jquery.min.js"></script>
+        <script type= "text/javascript" src="./Bootstrap/JS/bootstrap.min.js"></script>
+        
     </head>
-    <body onresize="handleResize()">
+
+    <body>
         <header>
-            <h1 class="screen-reader-text">Projematic</h1>
-            <img src="./img/projematic logo wide.png" alt="projematic logo" name="projematic logo">
+            
+            <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+                <h1 class="my-0 mr-md-auto" class="screen-reader-text">Projematic</h1>
+                <!--<h5 class="my-0 mr-md-auto font-weight-bolder">Projectmatic</h5> -->
+                <nav class="my-2 my-md-0 mr-md-3">
+                  <!-- <a class="p-2 text-dark" href="#">Features</a> -->
+                  <a class="p-2 text-dark" href="#">Templates</a>
+                  <a class="p-2 text-dark" href="#">Support</a>
+                  <a class="p-2 text-dark" href="#">Pricing</a>
+                </nav>
+                <a class="btn btn-outline-primary" href="#">Sign up</a>
+            </div>
+
+            <div class="container">
+                <h1 class="text-center" class="card-title pricing-card-title"><small class="text-muted"> Sign up and get a 30-day </small> FREE TRIAL</h1> <br>
+                <div class="card-deck mb-3 text-center">
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Personal</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>Benefits #1</li>
+                        <li>Benefits #2</li>
+                        <li>Benefits #3</li>
+                        <li>Benefits #4</li>
+                      </ul>
+                      <button type="button" class="btn btn-lg btn-block btn-outline-primary">Select Personal</button>
+                    </div>
+                  </div>
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Pro</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>Benefits #1</li>
+                        <li>Benefits #2</li>
+                        <li>Benefits #3</li>
+                        <li>Benefits #4</li>
+                      </ul>
+                      <button type="button" class="btn btn-lg btn-block btn-outline-primary">Select Pro</button>
+                    </div>
+                  </div>
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Business</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>Benefits #1</li>
+                        <li>Benefits #2</li>
+                        <li>Benefits #3</li>
+                        <li>Benefits #4</li>
+                      </ul>
+                      <button type="button" class="btn btn-lg btn-block btn-outline-primary">Select Business</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <div class="p-2 bd-highlight">Personal</div>
+                <div class="p-2 bd-highlight">Pro</div>
+                <div class="p-2 bd-highlight">Business</div>
+              </div>
+
         </header>
     </body>
 </html>
