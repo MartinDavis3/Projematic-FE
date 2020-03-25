@@ -64,6 +64,15 @@ svg g {
     transform: scale(1.0) translate(10px, 10px);
 }
 
+/* Currently only targeting these boxes for popups, so show pointer only for these */
+/* Eventually all boxes will be targeted for this under svg g */
+#stakeholder-management-plan,
+#stakeholder-register,
+#project-status-report,
+#communicate-with-stakeholders {
+    cursor: pointer;
+}
+
 
 svg text,
 svg tspan {
