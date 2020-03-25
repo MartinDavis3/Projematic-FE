@@ -138,10 +138,13 @@ h3 {
 
 article {
     display: grid;
-    grid-template-columns: 9.5vw 9.5vw 40vw 30.5vw 9.5vw;
     grid-template-rows: 48vw;
     justify-items: space-around;
     align-items: top;
+}
+
+.show-all {
+    grid-template-columns: 9.5vw 9.5vw 40vw 30.5vw 9.5vw;
 }
 
     /* Elements of the top-level grid (sections) */
@@ -470,11 +473,19 @@ article {
         border-width: 1px;
         border-top-style: solid;
         border-right-style: solid;
-        border-bottom-style: solid;
         border-left-style: solid;
+        cursor: pointer;
+    }
+
+    .fc-tab-off {
+        border-bottom-style: solid;
         background-color: #c0c6d0;
         /* background-color: magenta; */
-        cursor: pointer;
+    }
+
+    .fc-tab-on {
+        border-bottom-style: none;
+        background-color: #fcf7f8;    
     }
 
     .flowchart-tab p {
@@ -491,11 +502,6 @@ article {
         /* color: magenta; */
     }
 
-    #preproject-tab {
-        background-color: #fcf7f8;
-        border-bottom: none;
-    }
-
     .plan-graphic,
     .pair-graphic,
     .tools-graphic,
@@ -506,14 +512,32 @@ article {
     article {
         grid-template-rows: 118.5vw;
     }
-    
-    .flowchart-section {
+
+    .show-narrow {
+        grid-template-columns: 23.5vw
+    }
+
+    .show-medium {
+        grid-template-columns: 75.5vw
+    }
+
+    .show-wide {
+        grid-template-columns: 99vw
+    }
+
+    /* Using classes to show/hide sections does not work
+       here because section:nth-child(n),
+       used to set grid, beats class selector.
+
+    .hidden-section {
         display: none;
     }
 
-    #preproject-section {
+    .visible-section {
         display: grid;
     }
+
+    */
 
     .flowchart-section p {
         font-size: 2.475vw;
