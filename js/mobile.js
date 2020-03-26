@@ -1,10 +1,10 @@
-const screenWidthBreakpoint = 768
+const screenWidthBreakpoint = 780;
 
 // This function for expanding grid adapted from: w3schools How TO - Expanding Grid
 // https://www.w3schools.com/howto/howto_js_expanding_grid.asp
 // Hide all elements with class='containerTab', except for the one that matches the clickable grid column
 function openTab(sectionName, tabName) {
-  const secNames = ['preproject-section', 'initiation-section', 'planning-section', 'execution-section', 'closing-section']
+  const secNames = ['preproject-section', 'initiation-section', 'planning-section', 'execution-section', 'closing-section'];
   const secWidths = ['show-preproject', 'show-initiation', 'show-planning', 'show-execution', 'show-closing'];
   var winWidth = window.innerWidth;
   var fcSection, fcTab, oldClass, newClass, clickTab, fcArticle;
@@ -38,12 +38,11 @@ function openTab(sectionName, tabName) {
     oldClass=clickTab.className;
     newClass = oldClass.replace('fc-tab-off', 'fc-tab-on');
     clickTab.className = newClass;
-    // document.getElementById(sectionName).className = 'flowchart-section visible-section'
   }
 }
 
 // Change button appearance at screen width breakpoint
-var lastWinWidth
+var lastWinWidth;
 
 function handleResize() {
   var winWidth = window.innerWidth;

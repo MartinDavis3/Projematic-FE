@@ -442,7 +442,7 @@ article {
 /* Because this application is principally targeted as a desktop product,
    strict "mobile first" approach was not taken here.
    However mobile support is included and set up in this section */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
 
     /* Increase header size (as vw) for small width screen */
 
@@ -522,6 +522,11 @@ article {
         padding-top: 0.495vw;
     }
 
+    h3 {
+        font-size: 2.97vw;
+        text-align: center;
+    }
+
     article {
         grid-template-rows: 118.5vw;
     }
@@ -567,38 +572,5 @@ article {
     }
 
     */
-
-    .flowchart-section p {
-        font-size: 2.475vw;
-        line-height: 2.723vw;
-        padding-top: 0.495vw;
-    }
-
-}
-
-
-/* Desktop */
-@media screen and (min-width: 768px) {
-
-    .tab-div {
-        display: grid;
-        grid-template-columns: 9.5vw 9.5vw 40vw 30.5vw 9.5vw;
-    }
-
-    .flowchart-section {
-        display: grid;
-    }
-
-    .flowchart-tab {
-        background-color: #fcf7f8;
-        border-bottom-style: solid;
-        color: #003399;
-        border: black;
-        border-width: 1px;
-        border-top-style: solid;
-        border-right-style: solid;
-        border-bottom-style: solid;
-        border-left-style: solid;        
-    }
 
 }
