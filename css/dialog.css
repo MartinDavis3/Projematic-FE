@@ -47,7 +47,7 @@ button {
     border: none;
     color: #c0c6d0;
     font-size: 1vw;
-    padding: 0.625vw 0.83;
+    padding: 0.625vw 0.83vw;
     text-align: center;
     text-decoration: none;
     width: 18vw;
@@ -68,3 +68,45 @@ button {
 
   
   a:hover, a.ex2:active {font-size: 150%;}
+
+  
+  @media screen and (max-width: 780px) {
+    .popup {
+      height:20vw;
+      width: 20vw;
+      bottom: 25vh;
+      left: 25vw;
+      z-index: 2;
+      background-color:#c0c6d0;
+      color:#17255A;
+      border: solid;
+      font-size: small;
+      font-family: "Tahoma", "Georgia", "Arial";
+      padding: 0.5vw;
+  }
+  
+  .popup p {
+    font-size: 0.9vw;
+    line-height: 1.1vw;
+  }
+  
+  h4 {
+    font-size: 1.1vw;
+    padding-bottom: 0.3vw;
+  }
+  
+  a {
+      margin: 0.3vw;
+      font-size: 0.9vw;
+    }
+
+  button {
+      font-size: 1vw;
+      padding: 0.625vw 0.83vw;
+      width: 18vw; 
+         
+    }
+  
+
+  }
+
