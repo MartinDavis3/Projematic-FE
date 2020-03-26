@@ -13,6 +13,7 @@
     font-size: small;
     font-family: "Tahoma", "Georgia", "Arial";
     padding: 0.5vw;
+    top: 30vh;
 }
 
 .popup p {
@@ -31,6 +32,7 @@ a {
     font-weight: bold;
     margin: 0.3vw;
     font-size: 0.9vw;
+    display: block;
   }
 
  
@@ -70,10 +72,10 @@ button {
   a:hover, a.ex2:active {font-size: 150%;}
 
   
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 1px) {
     .popup {
-      height:20vw;
-      width: 20vw;
+      height: 49.5vw;
+      width: 49.5vw;
       bottom: 25vh;
       left: 25vw;
       z-index: 2;
