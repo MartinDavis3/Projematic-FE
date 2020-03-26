@@ -43,7 +43,7 @@ mybox3.addEventListener( 'click', function ( event ) {
     // } else {
         popupDiv.className = 'popup popup-visible';
     
-};
+});
 
 function closeBox3(){
     var popupDiv = document.getElementById('third-popup');
