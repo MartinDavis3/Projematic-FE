@@ -506,6 +506,9 @@ article {
         color: #003399;
     }
 
+    /* Increase graphic, text sizes and column length (as vw) for small
+       width screen as only showing one column */
+
     .plan-graphic,
     .pair-graphic,
     .tools-graphic,
@@ -513,20 +516,42 @@ article {
         width: 19.8vw;
     }
 
+    .flowchart-section p {
+        font-size: 2.475vw;
+        line-height: 2.723vw;
+        padding-top: 0.495vw;
+    }
+
     article {
         grid-template-rows: 118.5vw;
     }
 
-    .show-narrow {
-        grid-template-columns: 23.5vw
+    /* These are used with JavaScript to show column at correct width
+       and in correct place */
+
+    .show-preproject {
+        grid-template-columns: 23.5vw;
+        margin-left: 0;
     }
 
-    .show-medium {
-        grid-template-columns: 75.5vw
+    .show-initiation {
+        grid-template-columns: 23.5vw;
+        margin-left: 17vw;
     }
 
-    .show-wide {
-        grid-template-columns: 99vw
+    .show-planning {
+        grid-template-columns: 99vw;
+        margin-left: 0vw;
+     }
+
+    .show-execution {
+        grid-template-columns: 75.5vw;
+        margin-left: 22vw;
+    }
+
+    .show-closing {
+        grid-template-columns: 23.5vw;
+        margin-left: 74vw;
     }
 
     /* Using classes to show/hide sections does not work
