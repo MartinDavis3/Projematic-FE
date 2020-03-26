@@ -1,5 +1,6 @@
 @import "./meyer-reset.css";
 @import "./aria.css";
+@import "./dialog.css";
 
 
 /* General Setup */
@@ -9,7 +10,17 @@
     font-size: 20px;
     /* width: auto;  NOTE! cannot use width auto here, oterwise SVG rectangles do not work*/
     box-sizing: border-box;
+    margin-right: 0;
+    margin-left: 0;
     line-height: 22px;
+}
+
+
+header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
+    font-family: "Tahoma";
+    /* width: auto;  NOTE! cannot use width auto here, oterwise SVG rectangles do not work */
+    margin-right: 0;
+    margin-left: 0;
 }
 
 body {
@@ -17,33 +28,20 @@ body {
 }
 
 header {
-    height: 4vw;
-    text-align: center;
-    margin-top: 0.2vw;
-    padding-top: 0.4vw;
-    padding-bottom: 0.2vw;
+    text-align: center;    
 }
 
-header img {
-    max-width: 100%;
-    max-height: 100%
-}
-
-.tab-div {
-    display: grid;
-    grid-template-columns: 9.5vw 9.5vw 40vw 30.5vw 9.5vw;
+/* !!! Need to check here - two blocks seem to target the same elements */
+.tab-div div {
+    font-size: 1.3vw;
+    height: 35px;
+    line-height: 35px;
 }
 
 .flowchart-tab {
-    height: 35px;
-    font-size: 1.3vw;
-    line-height: 35px;
+    font-size: 20px;
     text-transform: uppercase;
     text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    color: #003399;
-    background-color: #fcf7f8;
 }
 
 /* Graphics elements */
@@ -52,6 +50,8 @@ header img {
 
 svg {
     background-color: #fcf7f8;
+    /* used if need to visualise full extent of svg */
+     /* background-color: lightblue; */
 }
 
 svg path,
@@ -62,22 +62,17 @@ svg rect {
 }
 
 svg g {
-    transform: translate(10px, 10px);
+    transform: scale(1.0) translate(10px, 10px);
+    cursor: pointer;    
 }
 
-/* Currently only targeting these boxes for popups, so show pointer only for these */
-/* Eventually all boxes will be targeted for this under svg g */
-#stakeholder-management-plan,
-#stakeholder-register,
-#project-status-report,
-#communicate-with-stakeholders {
-    cursor: pointer;
-}
 
 svg text,
 svg tspan {
     font-size: 14px;
     fill: #17255a;
+    /* used to test if targeting is good */
+    /* fill: magenta; */
 }
 
 /* For all boxes */
@@ -103,7 +98,6 @@ svg tspan {
 /* For extra shapes */
 
 #arrow-graphic g {
-    /* This might appear to not do anything, but it does! */
     transform: translate(0,0);
 }
 
@@ -121,11 +115,14 @@ h1 {
     padding: 4px;
 }
 
-/* Note: h2 is only used for section screen reader text
-    so needs no styling */
+h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
 
+/* !!! Not sure if there is an h3 - check */
 h3 {
-    font-size: 1.2vw;
     text-align: center;
 }
 
@@ -143,11 +140,10 @@ h3 {
 
 article {
     display: grid;
-    grid-template-rows: 48vw;
-}
-
-.show-all {
     grid-template-columns: 9.5vw 9.5vw 40vw 30.5vw 9.5vw;
+    grid-template-rows: 48vw;
+    justify-items: space-around;
+    align-items: top;
 }
 
     /* Elements of the top-level grid (sections) */
@@ -277,7 +273,7 @@ article {
                 grid-row: 2;
                 grid-column: 2 / span 4;
                 justify-self: stretch;
-                align-self: center;
+                align-self: end;
             }
 
             section:nth-child(3) > div:nth-child(5) > svg:nth-child(6) {
@@ -362,7 +358,10 @@ article {
             border-color: black;
             border-width: 1px;
             border-radius: 30px;
-            margin: 2.128%;
+            margin-top: 2.128%;
+            margin-right: 2.128%;
+            margin-bottom: 2.128%;
+            margin-left: 2.128%;
             /* styling as container of next level grid */
             display: grid;
             grid-template-columns: repeat(3, calc( 100% / 3 ) );
@@ -451,17 +450,7 @@ article {
 /* Because this application is principally targeted as a desktop product,
    strict "mobile first" approach was not taken here.
    However mobile support is included and set up in this section */
-@media screen and (max-width: 780px) {
-
-    /* Increase header size (as vw) for small width screen */
-
-    header {
-        height: 8vw;
-        text-align: center;
-        margin-top: 0.4vw;
-        padding-top: 0.8vw;
-        padding-bottom: 0.4vw;
-    }
+@media screen and (max-width: 768px) {
 
     /* Add styling for clickable boxes along top for mobile */
 
@@ -483,24 +472,11 @@ article {
         border-width: 1px;
         border-top-style: solid;
         border-right-style: solid;
-        border-left-style: solid;
-        cursor: pointer;
-    }
-
-    .fc-tab-off {
         border-bottom-style: solid;
+        border-left-style: solid;
         background-color: #c0c6d0;
-    }
-
-    .fc-tab-on {
-        border-bottom-style: none;
-        background-color: #fcf7f8;    
-    }
-
-    .fc-tab-on p {
-        border-top-style: solid;
-        border-top-width: 3px;
-        border-top-color: #00e6e6;   
+        /* background-color: magenta; */
+        cursor: pointer;
     }
 
     .flowchart-tab p {
@@ -508,15 +484,19 @@ article {
         margin-right: 0;
         padding-top: 7.5px;
         padding-right: 4px;
+        padding-bottom: 7.5px;
         padding-left: 4px;
         text-align: center;
-        font-size: 2.6vw;
-        line-height: 2.6vw;        
+        font-size: 20px;
+        line-height: 20px;        
         color: #003399;
+        /* color: magenta; */
     }
 
-    /* Increase graphic, text sizes and column length (as vw) for small
-       width screen as only showing one column */
+    #preproject-tab {
+        background-color: #fcf7f8;
+        border-bottom: none;
+    }
 
     .plan-graphic,
     .pair-graphic,
@@ -525,61 +505,49 @@ article {
         width: 19.8vw;
     }
 
+    article {
+        grid-template-rows: 118.5vw;
+    }
+    
+    .flowchart-section {
+        display: none;
+    }
+
+    #preproject-section {
+        display: grid;
+    }
+
     .flowchart-section p {
         font-size: 2.475vw;
         line-height: 2.723vw;
         padding-top: 0.495vw;
     }
 
-    h3 {
-        font-size: 2.97vw;
-        text-align: center;
+}
+
+
+/* Desktop */
+@media screen and (min-width: 768px) {
+
+    .tab-div {
+        display: grid;
+        grid-template-columns: 9.5vw 9.5vw 40vw 30.5vw 9.5vw;
     }
 
-    article {
-        grid-template-rows: 118.5vw;
-    }
-
-    /* These are used with JavaScript to show column at correct width
-       and in correct place */
-
-    .show-preproject {
-        grid-template-columns: 23.5vw;
-        margin-left: 0;
-    }
-
-    .show-initiation {
-        grid-template-columns: 23.5vw;
-        margin-left: 17vw;
-    }
-
-    .show-planning {
-        grid-template-columns: 99vw;
-        margin-left: 0vw;
-     }
-
-    .show-execution {
-        grid-template-columns: 75.5vw;
-        margin-left: 22vw;
-    }
-
-    .show-closing {
-        grid-template-columns: 23.5vw;
-        margin-left: 74vw;
-    }
-
-    /* Using classes to show/hide sections does not work
-       here because section:nth-child(n),
-       used to set grid, beats class selector.
-
-    .hidden-section {
-        display: none;
-    }
-
-    .visible-section {
+    .flowchart-section {
         display: grid;
     }
 
-    */
+    .flowchart-tab {
+        background-color: #fcf7f8;
+        border-bottom-style: solid;
+        color: #003399;
+        border: black;
+        border-width: 1px;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-left-style: solid;        
+    }
 
 }
