@@ -9,17 +9,7 @@
     font-size: 20px;
     /* width: auto;  NOTE! cannot use width auto here, oterwise SVG rectangles do not work*/
     box-sizing: border-box;
-    margin-right: 0;
-    margin-left: 0;
     line-height: 22px;
-}
-
-
-header, h1, footer, main, h2, h3, p, ul, a, article, div, section, form {
-    font-family: "Tahoma";
-    /* width: auto;  NOTE! cannot use width auto here, oterwise SVG rectangles do not work */
-    margin-right: 0;
-    margin-left: 0;
 }
 
 body {
@@ -30,17 +20,16 @@ header {
     text-align: center;    
 }
 
-/* !!! Need to check here - two blocks seem to target the same elements */
-.tab-div div {
-    font-size: 1.3vw;
-    height: 35px;
-    line-height: 35px;
-}
-
 .flowchart-tab {
-    font-size: 20px;
+    height: 35px;
+    font-size: 1.3vw;
+    line-height: 35px;
     text-transform: uppercase;
     text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    color: #003399;
+    background-color: #fcf7f8;
 }
 
 /* Graphics elements */
@@ -49,8 +38,6 @@ header {
 
 svg {
     background-color: #fcf7f8;
-    /* used if need to visualise full extent of svg */
-     /* background-color: lightblue; */
 }
 
 svg path,
@@ -61,16 +48,13 @@ svg rect {
 }
 
 svg g {
-    transform: scale(1.0) translate(10px, 10px);
+    transform: translate(10px, 10px);
 }
-
 
 svg text,
 svg tspan {
     font-size: 14px;
     fill: #17255a;
-    /* used to test if targeting is good */
-    /* fill: magenta; */
 }
 
 /* For all boxes */
@@ -96,6 +80,7 @@ svg tspan {
 /* For extra shapes */
 
 #arrow-graphic g {
+    /* This might appear to not do anything, but it does! */
     transform: translate(0,0);
 }
 
@@ -113,14 +98,11 @@ h1 {
     padding: 4px;
 }
 
-h2 {
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-}
+/* Note: h2 is only used for section screen reader text
+    so needs no styling */
 
-/* !!! Not sure if there is an h3 - check */
 h3 {
+    font-size: 1.2vw;
     text-align: center;
 }
 
@@ -139,8 +121,6 @@ h3 {
 article {
     display: grid;
     grid-template-rows: 48vw;
-    justify-items: space-around;
-    align-items: top;
 }
 
 .show-all {
@@ -359,10 +339,7 @@ article {
             border-color: black;
             border-width: 1px;
             border-radius: 30px;
-            margin-top: 2.128%;
-            margin-right: 2.128%;
-            margin-bottom: 2.128%;
-            margin-left: 2.128%;
+            margin: 2.128%;
             /* styling as container of next level grid */
             display: grid;
             grid-template-columns: repeat(3, calc( 100% / 3 ) );
