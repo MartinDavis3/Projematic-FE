@@ -1,22 +1,36 @@
 .popup {
     position: fixed;
-    height:220px;
-    max-height: 260px;
-    width: 300px;
-    max-width: 350px;
-    bottom: 50vh;
-    left: 50vw;
+    height:20vw;
+    /* max-height: 35vm; */
+    width: 20vw;
+    /* max-width: 30vm; */
+    bottom: 25vh;
+    left: 25vw;
     z-index: 2;
     background-color:#c0c6d0;
     color:#17255A;
     border: solid;
     font-size: small;
     font-family: "Tahoma", "Georgia", "Arial";
+    padding: 0.5vw;
+}
+
+.popup p {
+  font-size: 0.9vw;
+  line-height: 1.1vw;
+}
+
+h4 {
+  font-size: 1.1vw;
+  font-weight: bold;
+  padding-bottom: 0.3vw;
 }
 
 a {
     color: #17255a;
     font-weight: bold;
+    margin: 0.3vw;
+    font-size: 0.9vw;
   }
 
  
@@ -28,16 +42,18 @@ a {
     display: none;
 }
 
-.button {
+button {
     background-color: #17255A;
     border: none;
-    color: c0c6d0;
-    padding: 12px 16px;
+    color: #c0c6d0;
+    font-size: 1vw;
+    padding: 0.625vw 0.83;
     text-align: center;
     text-decoration: none;
+    width: 18vw;
    
-    font-size: xx-small;
-    margin: 4px 2px;
+    /* font-size: xx-small; */
+    /* margin: 4px 2px; */
     cursor: pointer;
     border-radius: 12px;
     transition-duration: 0.4s;
@@ -45,7 +61,7 @@ a {
        
   }
 
-  .button:hover {
+  button:hover {
     background-color: #003399; 
     color: #003399;
   }
