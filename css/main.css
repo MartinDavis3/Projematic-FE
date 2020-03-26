@@ -17,7 +17,21 @@ body {
 }
 
 header {
-    text-align: center;    
+    height: 4vw;
+    text-align: center;
+    margin-top: 0.2vw;
+    padding-top: 0.4vw;
+    padding-bottom: 0.2vw;
+}
+
+header img {
+    max-width: 100%;
+    max-height: 100%
+}
+
+.tab-div {
+    display: grid;
+    grid-template-columns: 9.5vw 9.5vw 40vw 30.5vw 9.5vw;
 }
 
 .flowchart-tab {
@@ -430,6 +444,16 @@ article {
    However mobile support is included and set up in this section */
 @media screen and (max-width: 768px) {
 
+    /* Increase header size (as vw) for small width screen */
+
+    header {
+        height: 8vw;
+        text-align: center;
+        margin-top: 0.4vw;
+        padding-top: 0.8vw;
+        padding-bottom: 0.4vw;
+    }
+
     /* Add styling for clickable boxes along top for mobile */
 
     /* Styling for expanding grid adapted from: w3schools How TO - Expanding Grid
@@ -457,7 +481,6 @@ article {
     .fc-tab-off {
         border-bottom-style: solid;
         background-color: #c0c6d0;
-        /* background-color: magenta; */
     }
 
     .fc-tab-on {
@@ -465,18 +488,22 @@ article {
         background-color: #fcf7f8;    
     }
 
+    .fc-tab-on p {
+        border-top-style: solid;
+        border-top-width: 3px;
+        border-top-color: #00e6e6;   
+    }
+
     .flowchart-tab p {
         margin-left: 0;
         margin-right: 0;
         padding-top: 7.5px;
         padding-right: 4px;
-        padding-bottom: 7.5px;
         padding-left: 4px;
         text-align: center;
-        font-size: 20px;
-        line-height: 20px;        
+        font-size: 2.6vw;
+        line-height: 2.6vw;        
         color: #003399;
-        /* color: magenta; */
     }
 
     .plan-graphic,
