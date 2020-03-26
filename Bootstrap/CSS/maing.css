@@ -61,18 +61,24 @@
     border:0;
     background:none;
   }
+
+  .container {
+    width: 90vw;
+}
+
+td,th {
+    width: 25vw;
+  
+  }
   
   
   @media (min-width: 540px) {
+
   
     td,th {
       display:table-cell !important;
     }
-    td,th {
-      width: 330px;
-    
-    }
     td+td, th+th {
       width: auto;
     }
-  } */
+  } 
