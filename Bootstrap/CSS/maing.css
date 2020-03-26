@@ -1,0 +1,84 @@
+
+
+
+/* Comparison Table with ticks */
+
+/* Referenced from http://blog.dynamicdrive.com/free-comparison-and-pricing-table-templates/ */
+
+/* {
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+     outline: 0;
+  } 
+  body { 
+    font-family:Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size:14px;
+    padding:14px;
+  } */
+
+  article {
+    width:100%;
+    max-width:10000px;
+    margin:0 auto;
+    height:1000px;
+    position:relative;
+  } 
+  
+ /* Coloring for Headers */
+
+  .task {
+      background-color: #C0C6D0;
+  }
+
+  table { border-collapse:collapse; table-layout:fixed; width:100%; }
+  th { background:#C0C6D0; display:none; }
+  td, th {
+    height:53px
+  } 
+  td,th { border:1px solid #DDD; padding:10px; empty-cells:show; } 
+  td,th {
+    text-align:left;
+  }
+  td+td, th+th {
+    text-align:center;
+    display:none;
+  }
+  td.default {
+    display:table-cell;
+  }
+  .bg-blue {
+    border-top:3px solid #C0C6D0;
+  } 
+  .sep {
+    background:#00E6E6;
+    font-weight:bold;
+  } 
+  .txt-l { font-size:28px; font-weight:bold; }
+  .txt-top { position:relative; top:-9px; left:-2px; }
+  .tick { font-size:18px;}
+  .hide {
+    border:0;
+    background:none;
+  }
+
+  .container {
+    width: 90vw;
+}
+
+td,th {
+    width: 25vw;
+  
+  }
+  
+  
+  @media (min-width: 540px) {
+
+  
+    td,th {
+      display:table-cell !important;
+    }
+    td+td, th+th {
+      width: auto;
+    }
+  } 
