@@ -1,8 +1,8 @@
 .popup {
     position: fixed;
-    height:20vw;
+    height:23vw;
     /* max-height: 35vm; */
-    width: 20vw;
+    width: 23vw;
     /* max-width: 30vm; */
     bottom: 25vh;
     left: 25vw;
@@ -50,12 +50,10 @@ button {
     color: #c0c6d0;
     font-size: 1vw;
     padding: 0.625vw 0.83vw;
+    margin-top: 0.7vw;
     text-align: center;
     text-decoration: none;
-    width: 18vw;
-   
-    /* font-size: xx-small; */
-    /* margin: 4px 2px; */
+    width: 21vw;
     cursor: pointer;
     border-radius: 12px;
     transition-duration: 0.4s;
@@ -72,40 +70,35 @@ button {
   a:hover, a.ex2:active {font-size: 150%;}
 
   
-  @media screen and (max-width: 1px) {
+  @media screen and (max-width: 780px) {
     .popup {
-      height: 49.5vw;
-      width: 49.5vw;
+      height: 46vw;
+      width: 46vw;
       bottom: 25vh;
       left: 25vw;
-      z-index: 2;
-      background-color:#c0c6d0;
-      color:#17255A;
-      border: solid;
-      font-size: small;
-      font-family: "Tahoma", "Georgia", "Arial";
       padding: 0.5vw;
   }
   
   .popup p {
-    font-size: 0.9vw;
-    line-height: 1.1vw;
+    font-size: 2vw;
+    line-height: 2vw;
   }
   
   h4 {
-    font-size: 1.1vw;
+    font-size: 2.8vw;
     padding-bottom: 0.3vw;
   }
   
   a {
       margin: 0.3vw;
-      font-size: 0.9vw;
+      font-size: 2vw;
     }
 
   button {
-      font-size: 1vw;
+      font-size: 2.5vw;
       padding: 0.625vw 0.83vw;
-      width: 18vw; 
+      width: 44vw; 
+      margin-top: 3vw;
          
     }
   
