@@ -1,50 +1,88 @@
-const screenWidthBreakpoint = 768
+const screenWidthBreakpoint = 780;
 
 // This function for expanding grid adapted from: w3schools How TO - Expanding Grid
 // https://www.w3schools.com/howto/howto_js_expanding_grid.asp
-// Hide all elements with class="containerTab", except for the one that matches the clickable grid column
+// Hide all elements with class='containerTab', except for the one that matches the clickable grid column
 function openTab(sectionName, tabName) {
-  const secNames = ["preproject-section", "initiation-section", "planning-section", "execution-section", "closing-section"]
-  const secWidths = ["23.5vw", "23.5vw", "99vw", "75.5vw", "23.5vw"]
+  const secNames = ['preproject-section', 'initiation-section', 'planning-section', 'execution-section', 'closing-section'];
+  const secWidths = ['show-preproject', 'show-initiation', 'show-planning', 'show-execution', 'show-closing'];
   var winWidth = window.innerWidth;
-  var fcSection, fcTab;
-  fcSection = document.getElementsByClassName("flowchart-section");
-  fcTab = document.getElementsByClassName("flowchart-tab");
+  var fcSection, fcTab, oldClass, newClass, clickTab, fcArticle;
+  fcSection = document.getElementsByClassName('flowchart-section');
+  fcTab = document.getElementsByClassName('flowchart-tab');
   if ( winWidth < screenWidthBreakpoint ) {
-    for ( let i = 0; i < fcSection.length; i++) {
-      fcSection[i].style.display = "none";
-      fcTab[i].style.borderBottomStyle = "solid";
-      fcTab[i].style.borderBottomWidth = "1px";
-        fcTab[i].style.backgroundColor = "#c0c6d0";
+    for ( let i = 0; i < fcTab.length; i++) {
+      // NOTE: Normally would not use inline styles.
+      // However, using classes like:
+      // oldClass = fcSection[i].className
+      // newClass = oldClass.replace('visible-section', 'hidden-section')
+      // fcSection[i].className = newClass
+      // does not work because section:nth-child(n) in CSS,
+      // used to set grid, appears to beat class selector (specificity).
+      // Could probably add a div below each section to hold grid, but this is a major change to
+      // the grid structure and is not the current priority (25-Mar-2020).
+      fcSection[i].style.display = 'none';
+      oldClass = fcTab[i].className;
+      newClass = oldClass.replace('fc-tab-on', 'fc-tab-off');
+      fcTab[i].className = newClass;
     }
     for ( let i = 0; i < 5; i++) {
       if ( sectionName === secNames[i] ) {
-        document.getElementById("full-flowchart").style.gridTemplateColumns = secWidths[i]
+        // Comment as above about inline styles
+        document.getElementById(sectionName).style.display = 'grid';
+        fcArticle = document.getElementById('full-flowchart');
+        fcArticle.className = secWidths[i];
       }
     }
-    document.getElementById(sectionName).style.display = "grid";
-    document.getElementById(tabName).style.borderBottomStyle = "none";
-    document.getElementById(tabName).style.backgroundColor = "#fcf7f8";
+    clickTab = document.getElementById(tabName);
+    oldClass=clickTab.className;
+    newClass = oldClass.replace('fc-tab-off', 'fc-tab-on');
+    clickTab.className = newClass;
   }
 }
 
 // Change button appearance at screen width breakpoint
-var lastWinWidth
+var lastWinWidth;
 
 function handleResize() {
   var winWidth = window.innerWidth;
   var fcSection, fcTab;
-  fcSection = document.getElementsByClassName("flowchart-section");
-  fcTab = document.getElementsByClassName("flowchart-tab");
+  fcSection = document.getElementsByClassName('flowchart-section');
+  fcTab = document.getElementsByClassName('flowchart-tab');
+  // If changing to larger screen
   if ( lastWinWidth < screenWidthBreakpoint && winWidth >= screenWidthBreakpoint ) {
     for ( let i = 0; i < fcSection.length; i++) {
-      fcSection[i].style.display = "grid";
-      fcTab[i].style.borderBottomStyle = "solid";
-      fcTab[i].style.backgroundColor = "#fcf7f8";
+      oldClass = fcTab[i].className;
+      newClass = oldClass.replace('fc-tab-on', 'fc-tab-off');
+      fcTab[i].className = newClass;
+      fcSection[i].style.display = 'grid';
     }  
-    document.getElementById("full-flowchart").style.gridTemplateColumns = "9.5vw 9.5vw 40vw 30.5vw 9.5vw"
+    document.getElementById('full-flowchart').className = 'show-all';
+  // If changing to a smaller screen
   } else if ( lastWinWidth >= screenWidthBreakpoint && winWidth < screenWidthBreakpoint ) {
-    openTab("preproject-section", "preproject-tab")
+    openTab('preproject-section', 'preproject-tab');
   }
-  lastWinWidth=winWidth
+  lastWinWidth=winWidth;
+}
+
+function setForScreenSize() {
+  var winWidth = window.innerWidth;
+  var fcSection, fcTab;
+  console.log('in routine setForScreenSize');
+  fcSection = document.getElementsByClassName('flowchart-section');
+  fcTab = document.getElementsByClassName('flowchart-tab');
+  // If large screen
+  if ( winWidth >= screenWidthBreakpoint ) {
+    for ( let i = 0; i < fcSection.length; i++) {
+      oldClass = fcTab[i].className;
+      newClass = oldClass.replace('fc-tab-on', 'fc-tab-off');
+      fcTab[i].className = newClass;
+      fcSection[i].style.display = 'grid';
+    }  
+    document.getElementById('full-flowchart').className = 'show-all';
+  // If small screen
+  } else if ( winWidth < screenWidthBreakpoint ) {
+    openTab('preproject-section', 'preproject-tab');
+  }
+  lastWinWidth=winWidth;
 }
