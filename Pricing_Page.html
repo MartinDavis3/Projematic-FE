@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Projematic Front-End - Pricing</title>
+        <meta name="author" content="MPG Group">
+        <meta charset="UTF-8">
+        <meta name="description" content="html boilerplate">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap Script(s)-->
+          <!-- html validator gave a warning on using this in script type= "text/javascript"-->
+        <script src="./Bootstrap/jQuery/jquery.min.js"></script>
+        <script src="./Bootstrap/JS/bootstrap.min.js"></script>
+       
+        <!-- Style(s)-->
+        <link rel="stylesheet" href="./Bootstrap/CSS/maing.css"> 
+
+        <!-- Script(s)-->
+        <script src="./Bootstrap/JS/scriptsg.js" defer></script>
+
+        <!-- Bootstrap Style(s)-->
+        <link rel="stylesheet" href="./Bootstrap/CSS/bootstrap.min.css"> 
+
+        <!-- Links to Font Awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      
+        
+    </head>
+
+    <body>
+        <header>
+          <!-- changed bg-white to bg-grey // also changed it in the bootstrap.min.css -->
+          <!-- Referenced from https://getbootstrap.com/docs/4.3/getting-started/introduction/-->
+            
+            <div class="navbar sticky-top navbar-light bg-light d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-offwhite border-bottom shadow-sm">
+               <!-- <h1 class="my-0 mr-md-auto">Projematic</h1> -->
+                <img class="my-0 mr-md-auto projematic logo " src="./img/projematic_logo_wide.png" alt="projematic logo">
+                <!--<h5 class="my-0 mr-md-auto font-weight-bolder">Projectmatic</h5> -->
+                <nav class="my-2 my-md-0 mr-md-3">
+                  <!-- <a class="p-2 text-dark" href="#">Features</a> -->
+                  <a class="p-2 text-dark" href="#">Templates</a>
+                  <a class="p-2 text-dark" href="#">Support</a>
+                  <a class="p-2 text-dark" href="#">Pricing</a>
+                </nav>
+                <a class="btn btn-outline-primary" href="#">Sign up</a>
+            </div>
+            <!-- Referenced from https://getbootstrap.com/docs/4.3/getting-started/introduction/-->
+            <div class="container">
+                <h1 class="text-center card-title pricing-card-title"> Monthly Membership Pricing</h1> <br>
+                <div class="card-deck mb-3 text-center">
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-bolder">Free</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>Benefits #1</li>
+                        <li>Benefits #2</li>
+                        <li>Benefits #3</li>
+                        <li>Benefits #4</li>
+                      </ul>
+                      <button type="button" class="btn btn-lg btn-block btn-outline-primary">Select Free</button>
+                    </div>
+                  </div>
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-bolder">Pro</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>Benefits #1</li>
+                        <li>Benefits #2</li>
+                        <li>Benefits #3</li>
+                        <li>Benefits #4</li>
+                      </ul>
+                      <button type="button" class="btn btn-lg btn-block btn-outline-primary">Select Pro</button>
+                    </div>
+                  </div>
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-bolder">Business</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>Benefits #1</li>
+                        <li>Benefits #2</li>
+                        <li>Benefits #3</li>
+                        <li>Benefits #4</li>
+                      </ul>
+                      <button type="button" class="btn btn-lg btn-block btn-outline-primary">Select Business</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+            <!-- Referenced from http://blog.dynamicdrive.com/free-comparison-and-pricing-table-templates/-->
+            <div class="container">
+              <article class="container">
+                <h2 class="text-center card-title pricing-card-title"> Membership Pricing Comparison</h2> <br>
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="hide"></th>
+                      <th class="bg-blue font-weight-bolder">Free</th>
+                      <th class="bg-blue font-weight-bolder default">Pro</th>
+                      <th class="bg-blue font-weight-bolder">Business</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="4" class="sep">Manage Tasks</td>
+                    </tr>
+                    <tr>
+                      <td class="task">Project Charter</td>
+                      <td><span class="tick">&#10004;</span></td>
+                      <td><span class="tick">&#10004;</span></td>
+                      <td><span class="tick">&#10004;</span></td>
+                      
+                    </tr>
+                    <tr>
+                      <td class="task">Risk Register</td>
+                      <td><span class="tick">&#10004;</span></td>
+                      <td><span class="tick">&#10004;</span></td>
+                      <td><span class="tick">&#10004;</span></td>
+                    </tr>
+                    <tr>
+                      <td class="task">Template #3</td>
+                      <td></td>
+                      <td class="default"><span class="tick">&#10004;</span></td>
+                      <td><span class="tick">&#10004;</span></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" class="sep">Manage Teams</td>
+                    </tr>
+                    <tr>
+                      <td class="task">Template #4</td>
+                      <td><span class="tick">&#10004;</span></td>
+                      <td class="default"><span class="tick">&#10004;</span></td>
+                      <td><span class="tick">&#10004;</span></td>
+                    </tr>
+                    <tr>
+                      <td class="task">Template #5</td>
+                      <td> </td>
+                      <td class="default"><span class="tick">&#10004;</span></td>
+                      <td><span class="tick">&#10004;</span></td>
+                    </tr>
+                    <tr>
+                      <td class="task">Template #6</td>
+                      <td></td>
+                      <td class="default"><span class="tick">&#10004;</span></td>
+                      <td><span class="tick">&#10004;</span></td>
+                    </tr>
+                    <tr>
+                    <td colspan="4" class="sep">Manage Multiple Projects</td>
+                    </tr>
+                    <tr>
+                    <td class="task">Template #7</td>
+                    <td><span class="tick">&#10004;</span></td>
+                    <td></td>
+                    <td><span class="tick">&#10004;</span></td>
+                    </tr>
+                   <tr>
+                    <td class="task">Template #8</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="tick">&#10004;</span></td>
+                   </tr>
+                   <tr>
+                    <td class="task">Template #9</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="tick">&#10004;</span></td>
+                   </tr>
+                   <tr>
+                    <td class="task">Template #10</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="tick">&#10004;</span></td>
+                   </tr>
+                   <tr>
+                    <td class="task">Template #11</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="tick">&#10004;</span></td>
+                   </tr>
+                   <tr>
+                    <td class="task">Template #12</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="tick">&#10004;</span></td>
+                   </tr>
+                   <tr> 
+                    <td></td>
+                    <td><button type="button" class="btn btn-md btn-block btn-outline-primary">Select Free</button></td>
+                    <td><button type="button" class="btn btn-md btn-block btn-outline-primary">Select Pro</button></td>
+                    <td><button type="button" class="btn btn-md btn-block btn-outline-primary">Select Business</button></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </article>
+            </div>
+        </header>
+    </body>
+</html>
