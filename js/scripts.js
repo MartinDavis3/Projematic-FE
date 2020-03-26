@@ -1,3 +1,4 @@
+var boxopen;
 
 var mybox1 = document.getElementById( 'stakeholder-management-plan' );
 mybox1.addEventListener( 'click', function ( event ) {
@@ -7,13 +8,16 @@ mybox1.addEventListener( 'click', function ( event ) {
     // if (divClass === 'popup popup-visible') {
         // popupDiv.className = 'popup popup-hidden';
     // } else {
+    if (!boxopen) {
         popupDiv.className = 'popup popup-visible';
-    // }
+        boxopen = true;
+    }
 });
 
 function closeBox1(){
     var popupDiv = document.getElementById('first-popup');
     popupDiv.className = 'popup popup-hidden';
+    boxopen =false;
 }
 
 
@@ -25,13 +29,16 @@ mybox2.addEventListener( 'click', function ( event ) {
     // if (divClass === 'popup popup-visible') {
         // popupDiv.className = 'popup popup-hidden';
     // } else {
-        popupDiv.className = 'popup popup-visible';
-    // }
+        if (!boxopen) {
+            popupDiv.className = 'popup popup-visible';
+            boxopen = true;
+        }
 });
 
 function closeBox2(){
     var popupDiv = document.getElementById('second-popup');
     popupDiv.className = 'popup popup-hidden';
+    boxopen = false;
 }
 
 var mybox3 = document.getElementById( 'communicate-with-stakeholders' );
@@ -41,11 +48,15 @@ mybox3.addEventListener( 'click', function ( event ) {
     // if (divClass === 'popup popup-visible') {
         // popupDiv.className = 'popup popup-hidden';
     // } else {
-        popupDiv.className = 'popup popup-visible';
+        if (!boxopen) {
+            popupDiv.className = 'popup popup-visible';
+            boxopen = true;
+        }
     
 });
 
 function closeBox3(){
     var popupDiv = document.getElementById('third-popup');
     popupDiv.className = 'popup popup-hidden';
+    boxopen = false;
 }
