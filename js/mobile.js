@@ -68,7 +68,6 @@ function handleResize() {
 function setForScreenSize() {
   var winWidth = window.innerWidth;
   var fcSection, fcTab;
-  console.log('in routine setForScreenSize');
   fcSection = document.getElementsByClassName('flowchart-section');
   fcTab = document.getElementsByClassName('flowchart-tab');
   // If large screen
