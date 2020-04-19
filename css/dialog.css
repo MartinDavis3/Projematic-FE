@@ -63,11 +63,15 @@ button {
 
   button:hover {
     background-color: #003399; 
-    color: #003399;
+    /* color: #003399; */
   }
 
   
-  a:hover, a.ex2:active {font-size: 150%;}
+  a:hover, a.ex2:active {
+    /* font-size: 150%; */
+    background-color: #17255a;
+    color: #c0c6d0;  
+  }
 
   
   @media screen and (max-width: 780px) {

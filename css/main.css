@@ -105,6 +105,7 @@ svg tspan {
 #arrow-graphic g {
     /* This might appear to not do anything, but it does! */
     transform: translate(0,0);
+    height: 0.4258vw;
 }
 
 #brace-graphic path {
@@ -164,7 +165,7 @@ article {
     /* for the section headings */
 
     h2:first-child {
-        width: 100%;
+        width: 0;
         border-bottom-style: solid;
         border-bottom-color: black;
         border-bottom-width: 1px;
