@@ -1,8 +1,8 @@
 .popup {
     position: fixed;
-    height:23vw;
+    height:auto;
     /* max-height: 35vm; */
-    width: 23vw;
+    width: 15vw;
     /* max-width: 30vm; */
     bottom: 25vh;
     left: 25vw;
@@ -12,18 +12,21 @@
     border: solid;
     font-size: small;
     font-family: "Tahoma", "Georgia", "Arial";
-    padding: 0.5vw;
-    top: 30vh;
+    /* padding: 0.5vw; */
+    /* top: 30vh; */
 }
 
 .popup p {
   font-size: 0.9vw;
   line-height: 1.1vw;
+  margin: 0.3vw;
 }
 
 h4 {
   font-size: 1.1vw;
   font-weight: bold;
+  line-height: 1.3vw;
+  margin: 0.3vw;
   padding-bottom: 0.3vw;
 }
 
@@ -32,7 +35,9 @@ a {
     font-weight: bold;
     margin: 0.3vw;
     font-size: 0.9vw;
-    display: block;
+    display: inline;
+    /* padding: 0.1vw; */
+    line-height: 1.3vw;
   }
 
  
@@ -53,9 +58,9 @@ button {
     margin-top: 0.7vw;
     text-align: center;
     text-decoration: none;
-    width: 21vw;
+    width: 100%;
     cursor: pointer;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     transition-duration: 0.4s;
 
        
@@ -76,33 +81,37 @@ button {
   
   @media screen and (max-width: 780px) {
     .popup {
-      height: 46vw;
-      width: 46vw;
+      height: auto;
+      width: 37.125vw;
       bottom: 25vh;
       left: 25vw;
-      padding: 0.5vw;
+      /* padding: 0.5vw; */
   }
   
   .popup p {
-    font-size: 2vw;
-    line-height: 2vw;
+    font-size: 2.2275vw;
+    line-height: 2.7225vw;
+    margin: 0.7425vw;
   }
   
   h4 {
-    font-size: 2.8vw;
-    padding-bottom: 0.3vw;
+    font-size: 2.7225vw;
+    line-height: 3.2175vw;
+    margin: 0.7425vw;
+    padding-bottom: 0.7425vw;
   }
   
   a {
-      margin: 0.3vw;
-      font-size: 2vw;
+      margin: 0.7425vw;
+      font-size: 2.2275vw;
+      line-height: 3.2175vw;
     }
 
   button {
-      font-size: 2.5vw;
-      padding: 0.625vw 0.83vw;
-      width: 44vw; 
-      margin-top: 3vw;
+      font-size: 2.475vw;
+      padding: 1.5469vw 2.0543vw;
+      /* width: 44vw;  */
+      margin-top: 1.7325vw;
          
     }
   
