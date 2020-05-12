@@ -1,13 +1,15 @@
 const popupTargetId = [
     'stakeholder-management-plan',
     'stakeholder-register',
-    'communicate-with-stakeholders'
+    'communicate-with-stakeholders',
+    'project-status-report'
 ];
 
 const popupId = [
     'first-popup',
     'second-popup',
-    'third-popup'
+    'third-popup',
+    'fourth-popup'
 ];
 
 var boxopen = false;

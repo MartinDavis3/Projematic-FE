@@ -1,19 +1,23 @@
 .popup {
-    position: fixed;
-    height:auto;
-    /* max-height: 35vm; */
-    width: 15vw;
-    /* max-width: 30vm; */
-    bottom: 25vh;
-    left: 25vw;
-    z-index: 2;
-    background-color:#c0c6d0;
-    color:#17255A;
-    border: solid;
-    font-size: small;
-    font-family: "Tahoma", "Georgia", "Arial";
-    /* padding: 0.5vw; */
-    /* top: 30vh; */
+  position: fixed;
+  height:auto;
+  width: 15vw;
+  bottom: 25vh;
+  left: 35vw;
+  z-index: 2;
+  background-color:#c0c6d0;
+  color:#17255A;
+  border: solid;
+  font-size: small;
+  font-family: "Tahoma", "Georgia", "Arial";
+}
+
+.popup h4 {
+  font-size: 1.1vw;
+  font-weight: bold;
+  line-height: 1.3vw;
+  margin: 0.3vw;
+  padding-bottom: 0.3vw;
 }
 
 .popup p {
@@ -22,24 +26,24 @@
   margin: 0.3vw;
 }
 
-h4 {
-  font-size: 1.1vw;
-  font-weight: bold;
-  line-height: 1.3vw;
+.popup li {
+  font-size: 0.9vw;
+  line-height: 1.1vw;
   margin: 0.3vw;
-  padding-bottom: 0.3vw;
+  margin-left: 0.9vw;
+  text-indent: -0.6vw;
+  list-style-type: disc;
+  list-style-position: inside; 
 }
 
-a {
-    color: #17255a;
-    font-weight: bold;
-    margin: 0.3vw;
-    font-size: 0.9vw;
-    display: inline;
-    /* padding: 0.1vw; */
-    line-height: 1.3vw;
-  }
-
+.popup a {
+  color: #17255a;
+  font-weight: bold;
+  margin: 0.3vw;
+  font-size: 0.9vw;
+  display: inline;
+  line-height: 1.3vw;
+}
  
 .popup-visible {
     display: block;
@@ -49,43 +53,42 @@ a {
     display: none;
 }
 
-button {
-    background-color: #17255A;
-    border: none;
-    color: #c0c6d0;
-    font-size: 1vw;
-    padding: 0.625vw 0.83vw;
-    margin-top: 0.7vw;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-    cursor: pointer;
-    /* border-radius: 12px; */
-    transition-duration: 0.4s;
+.popup button {
+  background-color: #17255A;
+  border: none;
+  color: #c0c6d0;
+  font-size: 1vw;
+  padding: 0.625vw 0.83vw;
+  margin-top: 0.7vw;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
 
-       
-  }
+.popup button:hover {
+  background-color: #003399; 
+}
 
-  button:hover {
-    background-color: #003399; 
-    /* color: #003399; */
-  }
-
+.popup a:hover, a:active {
+  background-color: #17255a;
+  color: #c0c6d0;  
+}
   
-  a:hover, a.ex2:active {
-    /* font-size: 150%; */
-    background-color: #17255a;
-    color: #c0c6d0;  
+@media screen and (max-width: 780px) {
+  .popup {
+    height: auto;
+    width: 37.125vw;
+    bottom: 25vh;
+    left: 25vw;
   }
-
   
-  @media screen and (max-width: 780px) {
-    .popup {
-      height: auto;
-      width: 37.125vw;
-      bottom: 25vh;
-      left: 25vw;
-      /* padding: 0.5vw; */
+  .popup h4 {
+    font-size: 2.7225vw;
+    line-height: 3.2175vw;
+    margin: 0.7425vw;
+    padding-bottom: 0.7425vw;
   }
   
   .popup p {
@@ -93,28 +96,26 @@ button {
     line-height: 2.7225vw;
     margin: 0.7425vw;
   }
-  
-  h4 {
-    font-size: 2.7225vw;
-    line-height: 3.2175vw;
+
+  .popup li {
+    font-size: 2.2275vw;
+    line-height: 2.7225vw;
     margin: 0.7425vw;
-    padding-bottom: 0.7425vw;
+    margin-left: 2.2275vw;
+    text-indent: -1.485vw;
+  }
+
+  .popup a {
+    margin: 0.7425vw;
+    font-size: 2.2275vw;
+    line-height: 3.2175vw;
+  }
+
+  .popup button {
+    font-size: 2.475vw;
+    padding: 1.5469vw 2.0543vw;
+    margin-top: 1.7325vw;         
   }
   
-  a {
-      margin: 0.7425vw;
-      font-size: 2.2275vw;
-      line-height: 3.2175vw;
-    }
-
-  button {
-      font-size: 2.475vw;
-      padding: 1.5469vw 2.0543vw;
-      /* width: 44vw;  */
-      margin-top: 1.7325vw;
-         
-    }
-  
-
-  }
+}
 

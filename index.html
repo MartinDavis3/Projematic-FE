@@ -10,9 +10,10 @@
         <link rel="stylesheet" href="./css/dialog.css">
         <script src="./js/scripts.js" defer></script>
         <script src="./js/mobile.js" defer></script>
+        <script src="./js/startalert.js" defer></script>
         
     </head>
-    <body onresize="handleResize()" onload=setForScreenSize() >
+    <body onresize="handleResize();"  onload="setForScreenSize();" >
         <header>
             <h1 class="screen-reader-text">Projematic</h1>
             <img src="./img/projematic-logo-wide.png" alt="projematic logo">
@@ -236,7 +237,7 @@
                 <h2 class="screen-reader-text">Execution</h2>
                 <p>Monitor work to ensure it is being performed as planned</p>
                 <svg class="plan-graphic" viewBox="0 0 140 98">
-                    <g>
+                    <g id="project-status-report">
                         <path class="box plan-box" d="M 0 0 L 120 0 L 120 68 Q 90 46.4 60 68 Q 30 89.6 0 68 L 0 12 Z" fill="#ffffff" stroke="#000000" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
                         <text x="60" y="18" dominant-baseline="middle" text-anchor="middle" fill="#000000">Project Status
                             <tspan x="60" y="38">Report</tspan>
@@ -391,7 +392,7 @@
                 
                 <a  href="Pricing_Page.html" target="_blank">Download Template</a>
                 <a  href="Pricing_Page.html" target="_blank">Knowledge Base Page</a>
-                <button onclick="closeBox('first-popup')">Close</button>
+                <button onclick="closeBox('first-popup');">Close</button>
             </div>
 
              <div id="second-popup" class="popup popup-hidden">
@@ -401,14 +402,27 @@
                 </p>                    
                 <a  href="Pricing_Page.html" target="_blank">Download Template</a>
                 <a  href="Pricing_Page.html" target="_blank">Knowledge Base Page</a>   
-                <button onclick="closeBox('second-popup')">Close</button>
+                <button onclick="closeBox('second-popup');">Close</button>
             </div>
 
             <div id="third-popup" class="popup popup-hidden">
                 <h4>Communicate with Stakeholders</h4>
                 <p>Regularly review and update the ranking of stakeholders in the Stakeholder Register. Add additional stakeholders if any are discovered.
                     Related templates: Stakeholder Register, Communication Matrix</p>
-                    <button onclick="closeBox('third-popup')">Close</button>  
+                    <button onclick="closeBox('third-popup');">Close</button>  
+            </div>
+
+            <div id="fourth-popup" class="popup popup-hidden">
+                <h4>Project Status Report</h4>
+                <p>Purpose is to periodically measure the overall status of the project against the performance baseline.</p>
+                <p>The status report must include:</p>
+                <ul>
+                    <li>Whether the work is being performed as planned (WBS).</li>
+                    <li>Whether project budget is being spent as planned.</li> 
+                    <li>Whether the project is on schedule.</li>
+                    <li>Whether anticipated risks have occurred, and the effectiveness of your risk response plans.</li>
+                </ul>
+                <button onclick="closeBox('fourth-popup');">Close</button>  
             </div>
         </main>
         <footer>
