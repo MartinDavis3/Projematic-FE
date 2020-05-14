@@ -1,8 +1,8 @@
 .popup {
   position: fixed;
   height:auto;
-  width: 15vw;
-  bottom: 25vh;
+  width: 18vw;
+  top: 12.5vw;
   left: 35vw;
   z-index: 2;
   background-color:#c0c6d0;
@@ -41,7 +41,7 @@
   font-weight: bold;
   margin: 0.3vw;
   font-size: 0.9vw;
-  display: inline;
+  display: inline-block;
   line-height: 1.3vw;
 }
  
@@ -54,6 +54,8 @@
 }
 
 .popup button {
+  position: relative;
+  bottom: 0;
   background-color: #17255A;
   border: none;
   color: #c0c6d0;
@@ -75,12 +77,32 @@
   background-color: #17255a;
   color: #c0c6d0;  
 }
+
+#splash-screen {
+  width: 50vw;
+  top: 10vw;
+  left: 25vw;
+  background-color:  #fcf7f8;
+  color: black;
+  border: solid;
+  font-size: small;
+  font-family: "Georgia", "Arial", "sans-serif";
+}
+
+#splash-screen h4 {
+  font-size: 1.65vw;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.95vw;
+  margin: 0.45vw;
+  padding-bottom: 0.45vw;
+}
   
 @media screen and (max-width: 780px) {
   .popup {
     height: auto;
-    width: 37.125vw;
-    bottom: 25vh;
+    width: 44.55vw;
+    top: 25vh;
     left: 25vw;
   }
   
@@ -116,6 +138,19 @@
     padding: 1.5469vw 2.0543vw;
     margin-top: 1.7325vw;         
   }
-  
+
+  #splash-screen {
+    width: 90vw;
+    top: 15vw;
+    left: 5vw;
+  }
+
+  #splash-screen h4 {
+    font-size: 4.084vw;
+    line-height: 4.826vw;
+    margin: 1.114vw;
+    padding-bottom: 1.114vw;
+  }
+      
 }
 

@@ -9,7 +9,8 @@ const popupId = [
     'first-popup',
     'second-popup',
     'third-popup',
-    'fourth-popup'
+    'fourth-popup',
+    'splash-screen' //The splash-screen is set to visible in html, so shows on startup and then can only be closed.
 ];
 
 var boxopen = false;
