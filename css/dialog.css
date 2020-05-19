@@ -5,11 +5,10 @@
   top: 12.5vw;
   left: 35vw;
   z-index: 2;
+  font-family: "Tahoma", "Georgia", "Arial";
+  border: solid;
   background-color:#c0c6d0;
   color:#17255A;
-  border: solid;
-  font-size: small;
-  font-family: "Tahoma", "Georgia", "Arial";
 }
 
 .popup h4 {
@@ -37,12 +36,12 @@
 }
 
 .popup a {
-  color: #17255a;
-  font-weight: bold;
-  margin: 0.3vw;
-  font-size: 0.9vw;
   display: inline-block;
+  font-size: 0.9vw;
+  font-weight: bold;
   line-height: 1.3vw;
+  margin: 0.3vw;
+  color: #17255a;
 }
  
 .popup-visible {
@@ -55,16 +54,15 @@
 
 .popup button {
   position: relative;
-  bottom: 0;
-  background-color: #17255A;
-  border: none;
-  color: #c0c6d0;
-  font-size: 1vw;
-  padding: 0.625vw 0.83vw;
-  margin-top: 0.7vw;
-  text-align: center;
-  text-decoration: none;
   width: 100%;
+  bottom: 0;
+  font-size: 1vw;
+  text-align: center;
+  margin-top: 0.7vw;
+  border: none;
+  padding: 0.625vw 0.83vw;
+  background-color: #17255A;
+  color: #c0c6d0;
   cursor: pointer;
   transition-duration: 0.4s;
 }
@@ -82,11 +80,10 @@
   width: 50vw;
   top: 10vw;
   left: 25vw;
+  font-family: "Georgia", "Arial", "sans-serif";
+  border: solid;
   background-color:  #fcf7f8;
   color: black;
-  border: solid;
-  font-size: small;
-  font-family: "Georgia", "Arial", "sans-serif";
 }
 
 #splash-screen h4 {

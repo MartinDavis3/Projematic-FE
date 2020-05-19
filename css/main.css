@@ -7,7 +7,7 @@
 * {  
     font-family: "Tahoma";
     font-size: 20px;
-    /* width: auto;  NOTE! cannot use width auto here, oterwise SVG rectangles do not work*/
+    /* width: auto;  NOTE! cannot use width auto here, otherwise SVG rectangles do not work*/
     box-sizing: border-box;
     line-height: 22px;
 }
@@ -140,7 +140,7 @@ h3 {
 /* The flowchart section with grids */
 
 /* Unusually for CSS, I am going to use indenting here, for elements of grids,
-   as I have several nested gids and this will make thing clearer. */
+   as I have several nested gids and this will make things clearer. */
 
 article {
     display: grid;
